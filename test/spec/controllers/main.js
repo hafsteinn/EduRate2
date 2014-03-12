@@ -13,7 +13,7 @@ describe('LoginFactory tests', function() {
         $httpBackend.when('POST', 'http://project3api.haukurhaf.net/api/v1/login/').respond({role: 'student', token: 'xxx'});
 
         // Create a fresh instance of the LoginFactory:
-        loginFactory = $injector.get('apiFactory');
+        loginFactory = $injector.get('loginFactory');
       }));
 
     it('is possible to login as Baering and get a token with xxx', function() {

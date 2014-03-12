@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('EduRateApp').factory('apiFactory',
+angular.module('EduRateApp').factory('loginFactory',
 ['$rootScope','$http', '$q',
 function ($rootScope,$http, $q) {
 

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('EduRateApp').controller('myCoursesController',
-['$scope', 'apiFactory', '$location',
+['$scope', 'loginFactory', '$location',
 function($scope, apiFactory, $location){
 
 	//TODO: we need to add the session Token to every server communication from now on.
