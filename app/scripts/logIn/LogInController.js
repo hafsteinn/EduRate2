@@ -5,16 +5,16 @@ angular.module('EduRateApp').controller('LogInController',
 function($scope, apiFactory, $location){
 
 	$scope.userData = {
-		user: '',
-		pass: ''
+		user: 'hafsteinn11',
+		pass: '123456'
 	};
 
 	$scope.logIn = function(){
 		//apiFactory.logIn($scope.user.userName, $scope.user.password);
 		if($scope.userData.user && $scope.userData.pass)
 		{
-			apiFactory.logIn($scope.userData).success(function(){
-				$location.path('/my/courses').replace();
+			apiFactory.logIn($scope.userData).then(function(data){
+				console.log(apiFactory.getToken());
 			});
 		}
 	};

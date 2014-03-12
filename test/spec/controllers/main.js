@@ -1,22 +1,33 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('LoginFactory tests', function() {
+    var $httpBackend;
+    var loginFactory;
+    var userObject = {user: 'hafsteinn11', pass: '123456'};
 
-  // load the controller's module
-  beforeEach(module('eduRateApp'));
+    beforeEach(module('EduRateApp'));
+    beforeEach(inject(function($injector) {
+        $httpBackend = $injector.get('$httpBackend');
 
-  var MainCtrl,
-    scope;
+        // Intercept HTTP requests and do the following:
+        $httpBackend.when('POST', 'http://project3api.haukurhaf.net/api/v1/login/').respond({role: 'student', token: 'xxx'});
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
-    });
-  }));
+        // Create a fresh instance of the LoginFactory:
+        loginFactory = $injector.get('apiFactory');
+      }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+    it('is possible to login as Baering and get a token with xxx', function() {
+        loginFactory.logIn(userObject).then(function(data) {
+            expect(loginFactory.getUsername()).toBe(data.username);
+            expect(data.username).toBe('hafsteinn11');
+
+            expect(loginFactory.getToken()).toBe(data.token);
+            expect(data.token).toBe('xxx');
+
+            expect(loginFactory.getRole()).toBe(data.role);
+            expect(data.role).toBe('student');
+          });
+        $httpBackend.expectPOST('http://project3api.haukurhaf.net/api/v1/login/');
+        $httpBackend.flush();
+      });
   });
-});
