@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('EduRateApp').controller('LogInController',
-['$scope', 'loginFactory', '$location',
-function($scope, loginFactory, $location){
+['$rootScope','$scope', 'loginFactory', '$location',
+function($rootScope, $scope, loginFactory, $location){
 
 	$scope.userData = {
 		user: 'hafsteinn11',
@@ -14,7 +14,9 @@ function($scope, loginFactory, $location){
 		if($scope.userData.user && $scope.userData.pass)
 		{
 			loginFactory.logIn($scope.userData).then(function(data){
-				console.log(loginFactory.getToken());
+				//TODO: Change from $rootScope to an angular value
+				$rootScope.tokenValue = data.token;
+				$location.path('my/courses/').replace();
 			});
 		}
 	};

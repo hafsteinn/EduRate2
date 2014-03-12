@@ -1,11 +1,9 @@
 'use strict';
 
 angular.module('EduRateApp').factory('loginFactory',
-['$rootScope','$http', '$q',
-function ($rootScope,$http, $q) {
+['$rootScope','$http', '$q','API_URL',
+function ($rootScope,$http, $q,API_URL) {
 
-	//TODO: change to angular constant which is initialized in app.js
-	var apiURL = 'http://project3api.haukurhaf.net/api/v1/';
 	var username, role, token;
 
 	return {
@@ -20,12 +18,12 @@ function ($rootScope,$http, $q) {
 			},
 			logIn: function (logInUser) {
 				var deferred = $q.defer();
-				$http.post(apiURL + 'login/', { 'user': logInUser.user, 'pass': logInUser.pass })
+				$http.post(API_URL + 'login/', { 'user': logInUser.user, 'pass': logInUser.pass })
 				.success(function(data, status, headers) {
 					username = logInUser.user;
-					token = data.token;
-					role = data.role;
-					deferred.resolve({ username: logInUser.user, role: data.role, token: data.token });
+					token = data.Token;
+					role = data.User.Role;
+					deferred.resolve({ username: logInUser.user, role: data.User.Role, token: data.Token });
 				}).error(function() {
 					deferred.reject();
 				});
@@ -34,7 +32,7 @@ function ($rootScope,$http, $q) {
 			},
 			myCourses: function() {
 				return $http({
-					url: apiURL + 'my/courses/',
+					url: API_URL + 'my/courses/',
 					method: 'GET'
 				});
 			}

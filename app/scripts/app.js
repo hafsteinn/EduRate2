@@ -11,10 +11,11 @@ angular.module('EduRateApp', [
         controller: 'LogInController'
       })
       .when('/my/courses',{
-        templateUrl: 'views/myCourses/myCourses.html',
+        templateUrl: 'views/student/myCourses/myCourses.html',
         controller: 'myCoursesController'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .constant('API_URL', 'http://project3api.haukurhaf.net/api/v1/');
