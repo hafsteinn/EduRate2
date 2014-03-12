@@ -1,0 +1,26 @@
+
+<a href='/evaluations'>The login page (LogInView)</a>
+
+<div ng-controller="LogInController">
+
+	<form name="loginForm" novalidate>
+		<input type="text"
+				class="form-control"
+				placeholder="username"
+				name="username"
+				ng-model="userData.user"
+				required
+				ng-maxlength="32"/>
+
+		<input type="password"
+				class="form-control"
+				placeholder="password"
+				name="password"
+				ng-model="userData.pass"
+				required
+				ng-maxlength="6"/>
+
+		<button  type="submit" ng-click="logIn()">login</button>
+	</form>
+
+</div>
