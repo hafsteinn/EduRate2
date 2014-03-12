@@ -15,8 +15,18 @@ function($rootScope, $scope, loginFactory, $location){
 		{
 			loginFactory.logIn($scope.userData).then(function(data){
 				//TODO: Change from $rootScope to an angular value
+				//I think its considered pretty bad to use $rootscope alltogether
 				$rootScope.tokenValue = data.token;
-				$location.path('my/courses/').replace();
+				$rootScope.fullName = data.fullName;
+
+				if(data.role === 'student')
+				{
+					$location.path('my/courses/').replace();
+				}
+				else if(data.role === 'admin')
+				{
+					//TOOD: send to admin view
+				}
 			});
 		}
 	};

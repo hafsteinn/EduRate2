@@ -1,10 +1,10 @@
 
-<h1>My courses</h1>
+<h1>{{fullName}}</h1>
 
 <div ng-controller="myCoursesController">
 	<section class="courseContainer">
-		<section class="courseInstance" ng-repeat="course in myCourses">
-			{{course.NameIS}}
+		<section class="alert alert-danger" id="courseInstance" ng-repeat="course in myCourses">
+			<h3>{{course.NameIS}}</h3>
 		</section>
 	</section>
 </div>
