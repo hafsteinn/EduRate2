@@ -6,7 +6,7 @@ function($rootScope, $scope, loginFactory, $location){
 
 	$scope.userData = {
 		user: 'admin',
-		pass: '123456'
+		pass: '1234567'
 	};
 
 	$scope.logIn = function(){
@@ -14,7 +14,7 @@ function($rootScope, $scope, loginFactory, $location){
 		if($scope.userData.user && $scope.userData.pass)
 		{
 			loginFactory.logIn($scope.userData).then(function(data){
-				
+
 				//TODO: Change from $rootScope to an angular value
 				//I think its considered pretty bad to use $rootscope alltogether
 				$rootScope.tokenValue = data.token;
@@ -31,5 +31,4 @@ function($rootScope, $scope, loginFactory, $location){
 			});
 		}
 	};
-
 }]);

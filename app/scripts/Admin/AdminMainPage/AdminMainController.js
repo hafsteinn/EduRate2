@@ -18,13 +18,4 @@ function($rootScope, $scope, adminFactory, $location){
 	//this function creates a new evaluation template
 	//adminFactory.newEvaluationTemplate($scope.evaluationTemplate);
 
-
-	adminFactory.evaluationTemplates().then(function(data){
-		$scope.allTemplates = data;
-		console.log('data: ' + data);
-	});
-
-	
-
-
 }]);

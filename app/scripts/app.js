@@ -20,7 +20,11 @@ angular.module('EduRateApp', [
       })
       .when('/evaluationtemplates', {
         templateUrl: 'views/Admin/evaluationTemplates.html',
-        controller: 'AdminEvalTemplatesController'
+        controller: 'AdminGetTemplatesController'
+      })
+      .when('/createtemplate', {
+        templateUrl: 'views/Admin/AdminCreateTemplateView.html',
+        controller: 'AdminCreateTemplateController'
       })
       .otherwise({
         redirectTo: '/'
