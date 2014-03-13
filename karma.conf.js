@@ -23,19 +23,13 @@ module.exports = function(config) {
          'app/scripts/app.js',
          'app/scripts/*.js',
          'app/scripts/**/*.js',
-         'test/spec/**/*.js'
+         'test/spec/**/*.spec.js'
     ],
 
     preprocessors: {
         '**/app/scripts/**/*.js': 'coverage'
     },
 
-    reporters: ['progress', 'coverage'],
-/*
-    coverageReporter: {
-        type: 'text-summary'
-    },
-*/
 
     // list of files to exclude
     exclude: [
@@ -45,8 +39,11 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+    reporters: ['progress','coverage'],
 
+    coverageReporter: {
+        type: 'text-summary'
+    },
 
     // web server port
     port: 9876,

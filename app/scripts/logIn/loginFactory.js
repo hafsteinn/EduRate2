@@ -33,11 +33,5 @@ function ($rootScope,$http, $q,API_URL) {
 
 				return deferred.promise;
 			},
-			myCourses: function() {
-				return $http({
-					url: API_URL + 'my/courses/',
-					method: 'GET'
-				});
-			}
 		};
 }]);

@@ -1,0 +1,29 @@
+<div ng-controller="AdminMainController">
+	<section class="courseContainer">
+
+
+		<section id="userInfo" class="alert alert-info">
+			<img class="userImage" src="{{userObject.ImageURL}}" alt="/images/avatar.png">
+			<section class="userInfoText">
+				<h2>{{userObject.FullName}}</h2>
+				<h3>{{userObject.SSN}}</h3>
+			</section>
+		</section>
+
+		<a href="#/evaluationtemplates">
+			<section class="alert alert-success" id="courseInstance">
+				<h3>Get templates</h3>
+			</section>
+		</a>
+
+		<section class="alert alert-success" id="courseInstance" href="#/admin/test">
+			<h3>Create template</h3>
+		</section>
+
+		<section class="alert alert-success" id="courseInstance" href="#/test">
+			<h3>Statistics</h3>
+		</section>
+
+
+	</section>
+</div>

@@ -5,7 +5,7 @@ angular.module('EduRateApp').controller('LogInController',
 function($rootScope, $scope, loginFactory, $location){
 
 	$scope.userData = {
-		user: 'hafsteinn11',
+		user: 'admin',
 		pass: '123456'
 	};
 
@@ -14,6 +14,7 @@ function($rootScope, $scope, loginFactory, $location){
 		if($scope.userData.user && $scope.userData.pass)
 		{
 			loginFactory.logIn($scope.userData).then(function(data){
+				
 				//TODO: Change from $rootScope to an angular value
 				//I think its considered pretty bad to use $rootscope alltogether
 				$rootScope.tokenValue = data.token;
@@ -25,7 +26,7 @@ function($rootScope, $scope, loginFactory, $location){
 				}
 				else if(data.role === 'admin')
 				{
-					//TOOD: send to admin view
+					$location.path('admin/').replace();
 				}
 			});
 		}

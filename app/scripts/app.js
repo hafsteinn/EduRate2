@@ -14,8 +14,16 @@ angular.module('EduRateApp', [
         templateUrl: 'views/student/myCourses/myCourses.html',
         controller: 'myCoursesController'
       })
+      .when('/admin', {
+        templateUrl: 'views/Admin/AdminMainView.html',
+        controller: 'AdminMainController'
+      })
+      .when('/evaluationtemplates', {
+        templateUrl: 'views/Admin/evaluationTemplates.html',
+        controller: 'AdminEvalTemplatesController'
+      })
       .otherwise({
         redirectTo: '/'
       });
   })
-  .constant('API_URL', 'http://project3api.haukurhaf.net/api/v1/');
+  .constant('API_URL', 'http://dispatch.ru.is/h18/api/v1/');
