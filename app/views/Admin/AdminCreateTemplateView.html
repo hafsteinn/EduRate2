@@ -1,19 +1,40 @@
 
-<div ng-controller="AdminCreateTemplateController">
-	<form class="templateForm">
-				<input type="text"
-						class="form-control"
-						placeholder="titill"
-						name="title"
-						ng-model="evaluationTemplate.TitleIS"
-						required
-						ng-maxlength="50"/>
-				<input type="text"
-						class="form-control"
-						placeholder="title"
-						name="title"
-						ng-model="evaluationTemplate.TitleEN"
-						required
-						ng-maxlength="50"/>
-	</form>
+<div ng-controller="AdminCreateTemplateController" class="createTemplateContainer">
+
+	<section class="left">
+	
+		<section class="top">
+
+				<form class="templateForm">
+					<input type="text"
+							class="form-control"
+							placeholder="titill"
+							name="title"
+							ng-model="evaluationTemplate.TitleIS"
+							required
+							ng-maxlength="50"/>
+					<input type="text"
+							class="form-control"
+							placeholder="title"
+							name="title"
+							ng-model="evaluationTemplate.TitleEN"
+							required
+							ng-maxlength="50"/>
+				</form>
+
+		</section>
+
+		<section class="middle">
+
+		</section>
+
+		<section class="bottom">
+
+		</section>
+
+	</section>
+
+	<section class="right">
+
+	</section>
 </div>

@@ -1,0 +1,62 @@
+.createTemplateContainer
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	height:100%;
+	width:100%;
+	border-style:solid;
+	border-color:black;
+}
+
+.left
+{
+	display:flex;
+	flex-flow:column;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:1 1 auto;
+	align-self: stretch;
+	border-style: solid;
+	border-color:red;
+}
+
+.right
+{
+	order:1;
+	flex:2 1 auto;
+	align-self: stretch;
+	border-style: solid;
+	border-color:green;
+}
+
+.top
+{
+	order:1;
+	flex:1 1 auto;
+	align-self: stretch;
+	border-style: solid;
+	border-color:blue;
+}
+
+.middle
+{
+	order:2;
+	flex:1 1 auto;
+	align-self: stretch;
+	border-style: solid;
+	border-color:yellow;
+}
+
+.bottom
+{
+	order:3;
+	flex:1 1 auto;
+	align-self: stretch;
+	border-style: solid;
+	border-color:purple;
+}
