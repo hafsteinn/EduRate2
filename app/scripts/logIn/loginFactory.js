@@ -4,7 +4,7 @@ angular.module('EduRateApp').factory('loginFactory',
 ['$rootScope','$http', '$q','API_URL',
 function ($rootScope,$http, $q,API_URL) {
 
-	var username, role, token,fullName;
+	var username, role, token,userObject;
 
 	return {
 			getToken: function() {
@@ -23,11 +23,10 @@ function ($rootScope,$http, $q,API_URL) {
 					username = logInUser.user;
 					token = data.Token;
 					role = data.User.Role;
-					fullName = data.User.FullName;
 					deferred.resolve({  username: logInUser.user,
 										role: data.User.Role,
 										token: data.Token,
-										fullName: data.User.FullName});
+										userObject: data.User});
 				}).error(function() {
 					deferred.reject();
 				});

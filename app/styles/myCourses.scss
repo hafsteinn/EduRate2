@@ -1,7 +1,53 @@
-.courseContainer
+
+#userInfo
 {
-	border-style: solid;
-	border-color:red;
+	margin:20px;
+	border-radius: 10px;
+
+	display:flex;
+	flex-flow:row;
+	justify-content:flex-start;
+	align-content:center;
+	align-items:center;
+}
+
+.userImage
+{
+	border-radius: 50%;
+	height:100px;
+	width:100px;
+	order:1;
+	flex:0 1 auto;
+	align-self:auto;
+
+}
+
+.userInfoText
+{
+	padding-left:20px;
+	order:2;
+	flex:0 1 auto;
+	align-self:auto;
+	min-width: 0;
+	min-height: auto;
+}
+
+h2
+{
+	order:1;
+	flex:0 1 auto;
+	align-self:auto;
+	min-width: 0;
+	min-height: auto;
+}
+
+h3
+{
+	order:2;
+	flex:0 1 auto;
+	align-self:auto;
+	min-width: 0;
+	min-height: auto;
 }
 
 #courseInstance

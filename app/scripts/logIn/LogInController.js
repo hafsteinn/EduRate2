@@ -17,7 +17,7 @@ function($rootScope, $scope, loginFactory, $location){
 				//TODO: Change from $rootScope to an angular value
 				//I think its considered pretty bad to use $rootscope alltogether
 				$rootScope.tokenValue = data.token;
-				$rootScope.fullName = data.fullName;
+				$rootScope.userObject = data.userObject;
 
 				if(data.role === 'student')
 				{
