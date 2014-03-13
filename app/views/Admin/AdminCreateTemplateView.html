@@ -1,1 +1,19 @@
-<p>create new view</p>
+
+<div ng-controller="AdminCreateTemplateController">
+	<form class="templateForm">
+				<input type="text"
+						class="form-control"
+						placeholder="titill"
+						name="title"
+						ng-model="evaluationTemplate.TitleIS"
+						required
+						ng-maxlength="50"/>
+				<input type="text"
+						class="form-control"
+						placeholder="title"
+						name="title"
+						ng-model="evaluationTemplate.TitleEN"
+						required
+						ng-maxlength="50"/>
+	</form>
+</div>
