@@ -35,10 +35,5 @@ function($rootScope, $scope, loginFactory, $location){
 			});
 		}
 	};
-	$scope.hideError = function(){
-		alert("Clicked");
-		$scope.loginfailed = true;
-	};
-
 }]);
 
