@@ -7,6 +7,10 @@ function($rootScope, $scope, adminFactory, $location){
 	$scope.userObject = $rootScope.userObject;
 	$(':radio').radio();
 
+	$scope.range = function(n) {
+        return new Array(n);
+    };
+
 	$scope.evaluationTemplate = {
 		TitleIS: $scope.TitleIS,
 		TitleEN: $scope.TitleEN,

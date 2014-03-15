@@ -59,7 +59,7 @@
             		<option value="5">5</option>
 			        <option value="6">6</option>
           		</select>
-				<input type="text" ng-repeat="numberOfexQuestion in numberOfexQuistions"
+				<input type="text" ng-repeat="numberOfexQuestion in range(5) track by $index"
 					class="form-control"
 					id=""
 					placeholder="Hér spuring fyrir kross "{{numberOfexQuestion}}"."
