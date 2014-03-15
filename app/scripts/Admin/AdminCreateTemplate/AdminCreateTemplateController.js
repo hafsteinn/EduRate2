@@ -15,9 +15,9 @@ function($rootScope, $scope, adminFactory, $location){
 
 	$scope.evaluationTemplate = {
 		TitleIS: $scope.TitleIS,
-		TitleEN: $scope.TitleEN,
+		TitleEN: 'TitleEN',
 		IntroTextIS: $scope.IntroTextIS,
-		IntroTextEN: $scope.IntroTextEN,
+		IntroTextEN: 'IntroTextEN',
 		CourseQuestions: [],
 		TeacherQuestions: []
 	};
