@@ -10,4 +10,12 @@ function($rootScope, $scope, adminFactory, $location){
 		$scope.allTemplates = data;
 	});
 
+$scope.sendEvaluation = function(id){
+	var newEvaluation = {
+		TemplateID: id,
+		StartDate: $scope.StartDate,
+		EndDate: $scope.EndDate
+	};
+}
+
 }]);

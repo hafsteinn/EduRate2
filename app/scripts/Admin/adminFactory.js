@@ -31,5 +31,18 @@ function ($rootScope,$http, $q,API_URL) {
 
 				return deferred.promise;
 			}
+
+			newEvaluation: function(newEval){
+				var deferred = $q.defer();
+				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
+				$http.post(API_URL + 'evaluations/', newEval)
+				.success(function(data, status, headers) {
+					deferred.resolve(data);
+				}).error(function() {
+					deferred.reject();
+				});
+
+				return deferred.promise;
+			}
 		};
 }]);
