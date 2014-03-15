@@ -1,28 +1,80 @@
 .adminOption
 {
-	border: 2px solid;
-	border-color:#F39C12;
 	margin-bottom: 10px;	
-	height: 80px;
+	height: 50px;
 	border-radius: 20px;
+	background-color: #F39C12
+;
+	width: 300px;
 }
 
 .option
 {
 	text-align: center;
-	color: #D35400;
+	color: white;
 	padding-top: 10px;
 }
 
 #userInfo
 {
-	border: 2px solid;
-	border-color:#3498DB;
 	height: 110px;
 	border-radius: 20px;
 }
 
 .userHeader
 {
-	color: #2980B9;
+	color: black;
+}
+
+.courseContainer
+{
+	display: flex;
+	flex-flow: column nowrap  ;
+	justify-content: center ;
+	align-content: center;
+	align-items: center;
+}
+
+.courseContainer section.userInfo
+{
+	order: 1;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+	align-content: center;
+
+}
+
+.courseContainer section.getTemp
+{
+	order: 2;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+	align-content: center;
+
+}
+
+.courseContainer section.createTemp
+{
+	order: 3;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+	align-content: center;
+
+}
+
+.courseContainer section.stats
+{
+	order: 4;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+	align-content: center;
+
 }

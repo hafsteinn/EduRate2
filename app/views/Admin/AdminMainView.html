@@ -1,30 +1,37 @@
-<div ng-controller="AdminMainController">
+<section ng-controller="AdminMainController">
 	<section class="courseContainer">
 
 		<section id="userInfo">
 			<img class="userImage" src="{{userObject.ImageURL}}" alt="image" onerror="this.src='/images/avatar.png'"/>
 			<section class="userInfoText">
-				<h4 class="userHeader">{{userObject.FullName}}</h4>
+				<h5 class="userHeader">{{userObject.FullName}}</h5>
 				<h6 class="userHeader">{{userObject.SSN}}</h6>
 			</section>
 		</section>
 
-		<a href="#/evaluationtemplates">
+		<section class = "getTemp">
+			<a href="#/evaluationtemplates">
+				<section class="adminOption" >
+					<h6 class = "option">Get templates</h6>
+				</section>
+			</a>
+		</section>
+			
+		<section class= "createTemp">
+			<a href="#/createtemplate">
 			<section class="adminOption" >
-				<h5 class = "option">Get templates</h5>
+				<h6 class = "option">Create template</h6>
 			</section>
-		</a>
+			</a>
+		</section>	
 
-		<a href="#/createtemplate">
-		<section class="adminOption" >
-			<h5 class = "option">Create template</h5>
+		<section class= "stats">
+			<a href="#/test">
+			<section class="adminOption" >
+				<h6 class = "option" >Statistics</h6>
+			</section>
+			</a>
 		</section>
-		</a>
-
-		<section class="adminOption" href="#/test">
-			<h5 class = "option" >Statistics</h5>
-		</section>
-
 
 	</section>
-</div>
+</section>

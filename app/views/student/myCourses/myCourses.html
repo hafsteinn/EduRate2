@@ -4,14 +4,14 @@
 		<section id="userInfo" class="alert alert-info">
 			<img class="userImage" src="{{userObject.ImageURL}}" alt="image" onerror="this.src='/images/avatar.png'"/>
 			<section class="userInfoText">
-				<h2>{{userObject.FullName}}</h2>
-				<h3>{{userObject.SSN}}</h3>
+				<h5>{{userObject.FullName}}</h5>
+				<h6>{{userObject.SSN}}</h6>
 			</section>
 		</section>
 
 
-		<section class="alert alert-danger" id="courseInstance" ng-repeat="course in myCourses" href="#/test">
-			<h3>{{course.NameIS}}</h3>
+		<section id="courseInstance" ng-repeat="course in myCourses" href="#/test">
+			<h6 class="courses">{{course.NameIS}}</h6>
 		</section>
 
 

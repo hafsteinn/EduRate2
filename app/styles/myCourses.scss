@@ -1,9 +1,7 @@
-
 #userInfo
 {
 	margin:20px;
 	border-radius: 10px;
-
 	display:flex;
 	flex-flow:row;
 	justify-content:flex-start;
@@ -54,7 +52,17 @@ h3
 
 #courseInstance
 {
-	padding:20px;
-	margin:20px;
-	border-radius: 10px;
+	margin-bottom:20px;
+	height: 50px;
+	border-radius: 20px;
+	background-color: #E74C3C
+
+;
+	width: 300px;
+}
+
+.courses
+{
+	text-align: center;
+	color: white;
 }
