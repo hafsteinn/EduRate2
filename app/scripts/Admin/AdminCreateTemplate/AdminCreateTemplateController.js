@@ -4,7 +4,23 @@ angular.module('EduRateApp').controller('AdminCreateTemplateController',
 ['$rootScope','$scope', 'adminFactory', '$location',
 function($rootScope, $scope, adminFactory, $location){
 
+	var numberOfexQ = 0;
+	$scope.numberOfexQuistions = [1,2,3,4];
 	$scope.userObject = $rootScope.userObject;
+	//change the number of X Questions
+	$("#numberOfexQuestion").click(function(e) {
+		numberOfexQ = $("#numberOfexQuestion :selected").val();
+		console.log(numberOfexQ);	
+
+		//set the number of X questions as selected
+		for (var i = 1; i <= numberOfexQ; i++) {
+			$scope.numberOfexQuistions.push(i);
+		};
+		console.log($scope.numberOfexQuistions);
+	}); 
+
+
+	
 	$(':radio').radio();
 
 	$scope.Answers = {

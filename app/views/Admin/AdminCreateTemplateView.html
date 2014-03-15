@@ -33,25 +33,44 @@
 					<input type="radio" name="catagory" value="Teacher">Teacher<br>
 				</label>
 			</section>
+
 			<section class"textQuestion">
 				<p>Textaspuring:</p>
 				<input type="text"
-					class=""
+					class="form-control"
 					id=""
 					placeholder="Hér kemur spurningin."
 					
 					requied
 					ng-maxlength=""/>
+				<button class="btn btn-embossed btn-primary"  type="button"> Vista spuringu </button>
 			</section>
 			<section class"exQuestion">
 				<p>Krossapuring:</p>
 				<input type="text"
-					class=""
+					class="form-control"
 					id=""
 					placeholder="Hér kemur spurningin."
 					
 					requied
 					ng-maxlength=""/>
+				<select id = "numberOfexQuestion" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					<span class="dropdown-arrow"></span>
+           			<option value="2">2</option>
+           			<option value="3">3</option>
+           			<option selected="selected" value="4">4</option>
+            		<option value="5">5</option>
+			        <option value="6">6</option>
+          		</select>
+				<input type="text" ng-repeat="numberOfexQuestion in numberOfexQuistions"
+					class="form-control"
+					id=""
+					placeholder="Hér spuring fyrir kross "{{numberOfexQuestion}}"."
+					
+					requied
+					ng-maxlength=""/>
+
+				<button class="btn btn-embossed btn-primary"  type="button"> Vista spuringu </button>
 			</section>
 		</section>
 
