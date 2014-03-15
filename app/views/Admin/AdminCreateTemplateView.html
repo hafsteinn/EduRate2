@@ -48,7 +48,7 @@
 					class="form-control"
 					id=""
 					placeholder="Hér kemur spurningin."
-					
+					ng-model="CMTextIS"
 					requied
 					ng-maxlength=""/>
 
@@ -61,14 +61,14 @@
 
 				<input type="text" ng-repeat="i in [] | range:numberOfQuestions"
 					class="form-control"
-					id=""
-					placeholder="Hér spuring fyrir kross "{{numberOfexQuestion}}"."
-					
+					id="{{$index+1}}"
+					placeholder="Hér spuring fyrir kross {{$index+1}}"
 					requied
 					ng-maxlength=""/>
 
-				<button class="btn btn-embossed btn-primary"  type="button"> Vista spuringu </button>
+				<button class="btn btn-embossed btn-primary"  type="button" ng-click="saveMult()"> Vista spuringu </button>
 			</section>
+			<button class="btn btn-embossed btn-primary"  type="button" ng-click="saveTemplate()"> save template </button>
 		</section>
 
 	</section>
@@ -89,10 +89,3 @@
 
 	</section>
 </div>
-
-
-
-<section class="textQuestion">
-	<textarea rows="10" cols="112" ng-model="CourseQuestions.TextIS"></textarea>
-	<button  class="btn btn-embossed btn-primary" type="submit" ng-click="hideCourseTextQuestion()" >save</button>
-</section>
