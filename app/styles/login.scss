@@ -1,4 +1,56 @@
-h1
+.loginInput
 {
-	text-align: center;
+	display: flex;
+	flex-flow: column nowrap  ;
+	justify-content: center ;
+	align-content: center;
+	align-items: center;
+}
+
+
+.class div.welcome
+{
+	order: 1;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+}
+
+.class div.inputUsername
+{
+	order: 2;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+}
+
+.class div.btn btn-info
+{
+	order: 3;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+}
+
+.class div.loginError
+{
+	order: 4;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+}
+
+
+.form-control
+{
+	margin-bottom: 10px;
+}
+
+#loginError
+{
+	color: red;
 }

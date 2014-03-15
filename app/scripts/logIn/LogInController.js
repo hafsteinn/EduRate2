@@ -9,12 +9,13 @@ function($rootScope, $scope, loginFactory, $location){
 		pass: '1234567'
 	};
 
+	$scope.loginfailed = true;
+
 	$scope.logIn = function(){
 		//apiFactory.logIn($scope.user.userName, $scope.user.password);
 		if($scope.userData.user && $scope.userData.pass)
 		{
 			loginFactory.logIn($scope.userData).then(function(data){
-
 				//TODO: Change from $rootScope to an angular value
 				//I think its considered pretty bad to use $rootscope alltogether
 				$rootScope.tokenValue = data.token;
@@ -27,8 +28,12 @@ function($rootScope, $scope, loginFactory, $location){
 				else if(data.role === 'admin')
 				{
 					$location.path('admin/').replace();
-				}
+				}	
+			}, function()
+			{
+				$scope.loginfailed = false;
 			});
 		}
 	};
 }]);
+

@@ -2,11 +2,18 @@
 
 angular.module('EduRateApp').factory('loginFactory',
 ['$rootScope','$http', '$q','API_URL',
-function ($rootScope,$http, $q,API_URL) {
+function ($rootScope, $http, $q,API_URL) {
 
 	var username, role, token,userObject;
 
 	return {
+
+			setloginfailed: function(data){
+		      loginfailed = data;
+		    },
+		    getloginfailed: function(){
+		      return loginfailed;
+		    },
 			getToken: function() {
 				return token;
 			},
