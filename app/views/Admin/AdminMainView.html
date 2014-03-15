@@ -1,28 +1,28 @@
 <div ng-controller="AdminMainController">
 	<section class="courseContainer">
 
-		<section id="userInfo" class="alert alert-info">
+		<section id="userInfo">
 			<img class="userImage" src="{{userObject.ImageURL}}" alt="image" onerror="this.src='/images/avatar.png'"/>
 			<section class="userInfoText">
-				<h3>{{userObject.FullName}}</h3>
-				<h5>{{userObject.SSN}}</h5>
+				<h4 class="userHeader">{{userObject.FullName}}</h4>
+				<h6 class="userHeader">{{userObject.SSN}}</h6>
 			</section>
 		</section>
 
 		<a href="#/evaluationtemplates">
 			<section class="adminOption" >
-				<h4 class = "option">Get templates</h4>
+				<h5 class = "option">Get templates</h5>
 			</section>
 		</a>
 
 		<a href="#/createtemplate">
 		<section class="adminOption" >
-			<h4 class = "option">Create template</h4>
+			<h5 class = "option">Create template</h5>
 		</section>
 		</a>
 
 		<section class="adminOption" href="#/test">
-			<h4 class = "option" >Statistics</h4>
+			<h5 class = "option" >Statistics</h5>
 		</section>
 
 

@@ -2,12 +2,27 @@
 {
 	border: 2px solid;
 	border-color:#F39C12;
-	margin-bottom: 10px;
-	text-align: centre;
+	margin-bottom: 10px;	
+	height: 80px;
+	border-radius: 20px;
 }
 
 .option
 {
 	text-align: center;
 	color: #D35400;
+	padding-top: 10px;
+}
+
+#userInfo
+{
+	border: 2px solid;
+	border-color:#3498DB;
+	height: 110px;
+	border-radius: 20px;
+}
+
+.userHeader
+{
+	color: #2980B9;
 }
