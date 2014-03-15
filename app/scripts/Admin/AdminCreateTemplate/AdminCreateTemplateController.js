@@ -1,5 +1,6 @@
 'use strict';
 
+
 angular.module('EduRateApp').controller('AdminCreateTemplateController',
 ['$rootScope','$scope', 'adminFactory', '$location',
 function($rootScope, $scope, adminFactory, $location){
@@ -7,8 +8,8 @@ function($rootScope, $scope, adminFactory, $location){
 	$scope.userObject = $rootScope.userObject;
 	$(':radio').radio();
 
-	$scope.range = function(n) {
-        return new Array(n);
+	$scope.range = function() {
+        return new Array($scope.numberOfQuestions);
     };
 
 	$scope.evaluationTemplate = {
@@ -19,6 +20,8 @@ function($rootScope, $scope, adminFactory, $location){
 		CourseQuestions: [],
 		TeacherQuestions: []
 	};
+
+	console.log($scope.asdf);
 
 	function newTextCourseQuestion(iTextIS,iTextEN,iImageURL){
 		var newTextCourseQuestion = {
