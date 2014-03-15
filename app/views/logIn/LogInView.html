@@ -1,24 +1,38 @@
+<section ng-controller="LogInController" class="loginInput">
+	<section class="loginHeader">
+		<h3 class = "welcome">Námsmatsvefur<h3>
+	</section>
 
+	<section class="loginForm">
+		<form name="loginForm" ng-mousedown="loginfailed = true" novalidate>
+			<section class="loginUsername">
+				<input type="text"
+						class="form-control"
+						placeholder="Enter your username"
+						name="username"
+						ng-model="userData.user"
+						required
+						ng-maxlength="32"/>
+			</section>
 
-<div ng-controller="LogInController" class="loginInput">
-	<h1 class = "welcome">Námsmatsvefur<h1>
-	<form name="loginForm" class = "inputUsername"  ng-mousedown="loginfailed = true" novalidate>
-		<input type="text"
-				class="form-control"
-				placeholder="Enter your username"
-				name="username"
-				ng-model="userData.user"
-				required
-				ng-maxlength="32"/>
+			<section class="loginPassword">
+			<input type="password"
+					class="form-control"
+					placeholder="password"
+					name="password"
+					ng-model="userData.pass"
+					required
+					ng-maxlength="6"/>
+			</section>
 
-		<input type="password"
-				class="form-control"
-				placeholder="password"
-				name="password"
-				ng-model="userData.pass"
-				required
-				ng-maxlength="6"/>
+	</section>
 
+	<section class="submitLogin">
 		<button class="btn btn-info" type="submit" ng-click="logIn()">login</button>
-		<h5 id="loginError"	ng-hide = 'loginfailed'> Wrong username or password! Try again</h5>
-</div>
+	</section>	
+
+	<selection class="loginError">
+		<h5 ng-hide = 'loginfailed'> Wrong username or password! Try again</h5>
+	</selection>
+	
+</section>

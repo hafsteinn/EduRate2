@@ -8,7 +8,7 @@
 }
 
 
-.class div.welcome
+.loginInput section.welcome
 {
 	order: 1;
 	flex: 0 1 auto;
@@ -17,7 +17,7 @@
 	min-height: auto;
 }
 
-.class div.inputUsername
+.loginInput section.loginForm section.loginUsername
 {
 	order: 2;
 	flex: 0 1 auto;
@@ -26,7 +26,7 @@
 	min-height: auto;
 }
 
-.class div.btn btn-info
+.loginInput section.loginForm section.loginPassword
 {
 	order: 3;
 	flex: 0 1 auto;
@@ -35,9 +35,19 @@
 	min-height: auto;
 }
 
-.class div.loginError
+
+.loginInput section.btn btn-info
 {
 	order: 4;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+}
+
+.loginInput section.loginError
+{
+	order: 5;
 	flex: 0 1 auto;
 	align-self: auto;
 	min-width: 0;
