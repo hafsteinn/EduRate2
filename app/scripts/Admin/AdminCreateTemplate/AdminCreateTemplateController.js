@@ -5,6 +5,7 @@ angular.module('EduRateApp').controller('AdminCreateTemplateController',
 function($rootScope, $scope, adminFactory, $location){
 
 	$scope.userObject = $rootScope.userObject;
+	$(':radio').radio();
 
 	$scope.Answers = {
 		TextIS: '',
