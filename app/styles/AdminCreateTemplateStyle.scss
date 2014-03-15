@@ -1,7 +1,7 @@
 .createTemplateContainer
 {
 	display:flex;
-	flex-flow:row nowrap;
+	flex-flow:column nowrap;
 	justify-content:center;
 	align-content:center;
 	align-item:center;
@@ -27,24 +27,49 @@
 
 .right
 {
+	display:flex;
+	flex-flow:row nowrap;
 	order:1;
-	flex:2 1 auto;
+	flex:2 1 70px;
 	align-self: stretch;
 	border-style: solid;
 	border-color:green;
 }
 
-.top
+.courseList
 {
 	order:1;
 	flex:1 1 auto;
+	align-self: auto;
+	border-style: solid;
+	border-color:purple;
+	margin:20px;
+}
+
+.teacherList
+{
+	order:2;
+	flex:1 1 auto;
+	align-self: auto;
+	border-style: solid;
+	border-color:purple;
+	margin:20px;
+}
+
+.top
+{
+	order:1;
+	flex:1 1 40px;
 	align-self: stretch;
 	border-style: solid;
 	border-color:blue;
+	height:50px;
 }
 
 .middle
 {
+	display:flex;
+	flex-flow:row;
 	order:2;
 	flex:1 1 auto;
 	align-self: stretch;
@@ -54,9 +79,65 @@
 
 .bottom
 {
+		display:flex;
+	flex-flow:row;
 	order:3;
 	flex:1 1 auto;
 	align-self: stretch;
 	border-style: solid;
 	border-color:purple;
 }
+
+.templateForm
+{
+	width:50%;
+	border-style: solid;
+	border-color:orange;
+	margin:auto;
+	padding-top:5%;
+}
+
+#textInput
+{
+	margin-top:10px;
+}
+
+#button1
+{
+	order:1;
+	flex:1 1 auto;
+	align-self: auto;
+	margin:20px;
+	border-radius:20px;
+}
+
+#button2
+{
+	order:2;
+	flex:1 1 auto;
+	align-self: auto;
+	margin:20px;
+	border-radius:20px;
+}
+
+
+#button3
+{
+	order:3;
+	flex:1 2 auto;
+	align-self: auto;
+	margin:20px;
+	border-radius:20px;
+}
+
+.textQuestion
+{
+	z-index: 100;
+	border-style: solid;
+	border-color: red;
+	margin:auto;
+	display:none;
+}
+
+
+

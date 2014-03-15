@@ -8,16 +8,16 @@
 			<form class="templateForm">
 				<input type="text"
 					class="form-control"
-					placeholder="titill"
-					name="title"
+					id="textInput"
+					placeholder="Titill"
 					ng-model="evaluationTemplate.TitleIS"
 					required
 					ng-maxlength="50"/>
 				<input type="text"
 					class="form-control"
-					placeholder="title"
-					name="title"
-					ng-model="evaluationTemplate.TitleEN"
+					id="textInput"
+					placeholder="Lýsing"
+					ng-model="evaluationTemplate.IntroTextIS"
 					required
 					ng-maxlength="50"/>
 			</form>
@@ -26,25 +26,31 @@
 
 		<section class="middle">
 
-			<form class="templateForm">
-				<button class="btn btn-embossed btn-primary" type="submit" ng-click="" >Textaspurningar</button>
-				<button class="btn btn-embossed btn-primary" type="submit" ng-click="" >Krossaspuringar</button>
-				<button class="btn btn-embossed btn-primary" type="submit" ng-click="" >Radio button</button>
-			</form>
-
 		</section>
 
 		<section class="bottom">
-			<form class="templateForm">
-				<button class="btn btn-embossed btn-primary" type="submit" ng-click="" >Textaspurningar</button>
-				<button class="btn btn-embossed btn-primary" type="submit" ng-click="" >Krossaspuringar</button>
-				<button class="btn btn-embossed btn-primary" type="submit" ng-click="" >Radio button</button>
-			</form>
+
+
 		</section>
 
 	</section>
 
 	<section class="right">
 
+		<section class="courseList">
+
+		</section>
+
+		<section class="teacherList">
+
+		</section>
+
 	</section>
 </div>
+
+
+
+<section class="textQuestion">
+	<textarea rows="10" cols="112" ng-model="CourseQuestions.TextIS"></textarea>
+	<button  class="btn btn-embossed btn-primary" type="submit" ng-click="hideCourseTextQuestion()" >save</button>
+</section>
