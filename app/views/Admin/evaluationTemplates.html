@@ -2,8 +2,16 @@
 	<section class="courseContainer">
 
 
-		<section class="alert alert-success" id="courseInstance" ng-repeat="template in allTemplates">
+		<section class="alert alert-success" id="courseInstance" ng-repeat="template in allTemplates" ng-click="showDateInput(template.ID)">
 			<h3>{{template.TitleIS}}</h3>
+		</section>
+
+		<section id="dateInput">
+			<h4>start date</h4>
+				<input id="startDateInput" type="text" >
+			<h4>end date</h4>
+				<input id="endDateInput" type="text" >
+			<button class="btn btn-embossed btn-primary"  type="button" ng-click="sendEvaluation()"> send </button>
 		</section>
 
 

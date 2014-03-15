@@ -30,8 +30,7 @@ function ($rootScope,$http, $q,API_URL) {
 				});
 
 				return deferred.promise;
-			}
-
+			},
 			newEvaluation: function(newEval){
 				var deferred = $q.defer();
 				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
