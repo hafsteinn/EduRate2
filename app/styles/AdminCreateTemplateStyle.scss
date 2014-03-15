@@ -72,14 +72,50 @@
 
 .middle
 {
-	display:flex;
-	flex-flow:row;
+	display: flex;
+	flex-flow: column nowrap  ;
+	justify-content: center ;
+	align-content: center;
+	align-items: center;
 	order:2;
 	flex:1 1 300px;
 	align-self: stretch;
 	border-style: solid;
 	border-color:yellow;
 }
+
+.class div.catagory
+{
+	order: 1;
+	flex: 0 1 auto;
+	flex-flow: row nowrap  ;
+
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+
+}
+
+.class div.textQuestion
+{
+	order: 1;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+	
+}
+
+.class div.exQuestion
+{
+	order: 1;
+	flex: 0 1 auto;
+	align-self: auto;
+	min-width: 0;
+	min-height: auto;
+	
+}
+
 
 .templateForm
 {
