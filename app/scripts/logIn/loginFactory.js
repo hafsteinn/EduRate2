@@ -2,11 +2,19 @@
 
 angular.module('EduRateApp').factory('loginFactory',
 ['$rootScope','$http', '$q','API_URL',
-function ($rootScope,$http, $q,API_URL) {
+function ($rootScope, $http, $q,API_URL) {
 
 	var username, role, token,userObject;
+    var loginfailed = false;
 
 	return {
+
+			setloginfailed: function(data){
+		      loginfailed = data;
+		    },
+		    getloginfailed: function(){
+		      return loginfailed;
+		    },
 			getToken: function() {
 				return token;
 			},
@@ -29,6 +37,7 @@ function ($rootScope,$http, $q,API_URL) {
 										userObject: data.User});
 				}).error(function() {
 					deferred.reject();
+					loginfailed = true;
 				});
 
 				return deferred.promise;
