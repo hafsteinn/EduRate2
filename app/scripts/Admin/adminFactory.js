@@ -26,6 +26,7 @@ function ($rootScope,$http, $q,API_URL) {
 				.success(function(data, status, headers) {
 					deferred.resolve(data);
 				}).error(function() {
+					console.log('somethings wrong');
 					deferred.reject();
 				});
 

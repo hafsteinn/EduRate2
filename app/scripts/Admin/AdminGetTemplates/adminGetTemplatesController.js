@@ -24,7 +24,6 @@ function($rootScope, $scope, adminFactory){
 			StartDate: StartDate,
 			EndDate: EndDate
 		};
-
 		adminFactory.newEvaluation(newEval);
 		$('dateInput').hide();
 	};

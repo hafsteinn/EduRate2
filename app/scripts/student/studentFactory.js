@@ -16,6 +16,30 @@ function ($rootScope,$http, $q,API_URL) {
 				});
 
 				return deferred.promise;
-			}
+			},
+			myEvaluations: function () {
+				var deferred = $q.defer();
+				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
+				$http.get(API_URL + 'my/evaluations/')
+				.success(function(data, status, headers) {
+					deferred.resolve(data);
+				}).error(function() {
+					deferred.reject();
+				});
+
+				return deferred.promise;
+			},
+			currentEvaluation: function (courseID, Semester, EvalID) {
+				var deferred = $q.defer();
+				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
+				$http.get(API_URL + 'courses/' + courseID + '/' + Semester + '/evaluations/' + EvalID)
+				.success(function(data, status, headers) {
+					deferred.resolve(data);
+				}).error(function() {
+					deferred.reject();
+				});
+
+				return deferred.promise;
+			},
 		};
 }]);

@@ -5,7 +5,7 @@ angular.module('EduRateApp').controller('LogInController',
 function($rootScope, $scope, loginFactory, $location){
 
 	$scope.userData = {
-		user: 'admin',
+		user: 'hafsteinn11',
 		pass: '1234567'
 	};
 

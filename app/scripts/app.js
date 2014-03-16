@@ -26,6 +26,10 @@ angular.module('EduRateApp', [
         templateUrl: 'views/Admin/AdminCreateTemplateView.html',
         controller: 'AdminCreateTemplateController'
       })
+      .when('/courses/:CourseID/:Semester/evaluations/:evalID', {
+        templateUrl: 'views/student/myEvaluations/currentEvaluation.html',
+        controller: 'myCoursesController'
+      })
       .otherwise({
         redirectTo: '/'
       });

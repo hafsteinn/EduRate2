@@ -1,0 +1,26 @@
+
+<div ng-controller="myCoursesController">
+	<section class="courseContainer">
+
+		<section class="header">
+			<h2>{{currentEvalData.TitleIS}}</2>
+			<h4>{{currentEvalData.IntoTextIS}}</h4>
+		</section>
+
+		<section ng-repeat="question in currentEvalData.CourseQuestions">
+			<span ng-switch="currentEvalData.CourseQuestion.Type">
+				<section ng-switch-when="text">
+					<h5>{{question.TextIS}}</h5>
+					<input type="text"
+								class="form-control"
+								placeholder="Enter your username"
+								name="username"
+								ng-model="userData.user"
+								required
+								ng-maxlength="32"/>
+				</section>
+			</span>
+		</section>
+
+	</section>
+</div>
