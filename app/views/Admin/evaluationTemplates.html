@@ -4,6 +4,7 @@
 
 		<section class="alert alert-success" id="courseInstance" ng-repeat="template in allTemplates" ng-click="showDateInput(template.ID)">
 			<h3>{{template.TitleIS}}</h3>
+			<i class="fa fa-bar-chart-o" ng-click="goToStats(template.ID)"></i>
 		</section>
 
 		<section id="dateInput">

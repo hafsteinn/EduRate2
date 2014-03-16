@@ -2,7 +2,7 @@
 
 angular.module('EduRateApp').controller('AdminGetTemplatesController',
 ['$rootScope','$scope', 'adminFactory', '$location',
-function($rootScope, $scope, adminFactory){
+function($rootScope, $scope, adminFactory, $location){
 
 	$scope.userObject = $rootScope.userObject;
 	var currentTemplate;
@@ -42,6 +42,12 @@ function($rootScope, $scope, adminFactory){
 			EndDate = EndDateInput.replace(/\//g, '-');
 		}
 	});
+
+
+	$scope.goToStats = function(evalID){
+		$rootScope.evalID = evalID;
+		$location.path('/evaluations/evalID');
+	};
 
 
 }]);

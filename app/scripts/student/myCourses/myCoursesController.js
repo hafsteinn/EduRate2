@@ -55,6 +55,7 @@ function($routeParams, $rootScope, $scope, studentFactory, $location){
 
 				oneAnswer = {
 					QuestionID: ques.ID,
+					TeacherSSN: '',
 					value: val
 				};
 
@@ -68,6 +69,7 @@ function($routeParams, $rootScope, $scope, studentFactory, $location){
 					{
 						oneAnswer = {
 							QuestionID: ques.ID,
+							TeacherSSN: '',
 							value: entry.Weight
 						};
 
