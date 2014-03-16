@@ -1,82 +1,105 @@
-
-<div ng-controller="AdminCreateTemplateController" class="createTemplateContainer">
+<section ng-controller="AdminCreateTemplateController" class="createTemplateContainer">
 
 	<section class="left">
 	
 		<section class="top">
 
 			<form class="templateForm">
-				<input type="text"
-					class="form-control"
-					id="textInput"
-					placeholder="Titill"
-					ng-model="evaluationTemplate.TitleIS"
-					required
-					ng-maxlength="50"/>
-				<input type="text"
-					class="form-control"
-					id="textInput"
-					placeholder="Lýsing"
-					ng-model="evaluationTemplate.IntroTextIS"
-					required
-					ng-maxlength="50"/>
-			</form>
+				<section class="tempName">
+					
+					<h7>Nafn smiðmátsins: </h7>
+					
+					<input type="text"
+						class="form-control input-sm"
+						placeholder="Titill "
+						ng-model="evaluationTemplate.TitleIS"
+						required
+						ng-maxlength="50"/>
+				</section>	
 
+				<section class="tempInfo">
+					<h7>Lýsing á sniðmátinu: </h7>
+				
+					<input type="text"
+						class="form-control input-sm" 
+						placeholder="Lýsing"
+						ng-model="evaluationTemplate.IntroTextIS"
+						required
+						ng-maxlength="50"/>
+				</section>		
+			</form>
 		</section>
+
 
 		<section class="middle">
 			<section class="catagory">
-				<label class="radio">
-					<input type="radio" name="catagory" id="courseCheck">Course<br>
-				</label>
-				<label class="radio">
-					<input type="radio" name="catagory" id="teacherCheck">Teacher<br>
-				</label>
+				<section class = "courseRadio">
+					<label class="radio">
+						<input type="radio" name="catagory" id="courseCheck">Course<br>
+					</label>
+				</section>
+				<section class = "teacherRadio">
+					<label class="radio">
+						<input type="radio" name="catagory" id="teacherCheck">Teacher<br>
+					</label>
+				</section>
 			</section>
 
-			<section class"textQuestion">
-				<p>Textaspurning:</p>
-				<textarea class="form-control" rows="10" cols="112" ng-model="CTextIS"></textarea>
-				<button class="btn btn-embossed btn-primary"  type="button" ng-click="saveText()"> Vista spurningu </button>
+			<section class="tQuest">
+				
+					<h7>Textaspurning:</h7>
+					<textarea class="form-control input-sm" rows="2" ng-model="CTextIS"></textarea>
+				<section class = "saveTextQuest">
+					<button class="btn btn-primary"  type="button" ng-click="saveText()"> Vista spurningu </button>
+				</section>
+
 			</section>
 
-
-
-			<section class"exQuestion">
-				<p>Krossapurning:</p>
-				<input type="text"
-					class="form-control"
+			<section class = "xQuest">
+				
+				<h7>Krossapurning:</h7>
+				
+				<section class="textExQuest">
+					<input type="text"
+					class="form-control input-sm"
 					id=""
 					placeholder="Hér kemur spurningin."
 					ng-model="CMTextIS"
 					requied
 					ng-maxlength=""/>
+				</section>
 
+				<section class="numEx">
 					<input type="text"
-					class="form-control"
+					class="form-control input-sm"
 					placeholder="fjöldi krossaspurninga"
 					requied
 					ng-maxlength="2"
 					ng-model="numberOfQuestions"/>
-
+				</section>
 				<input type="text" ng-repeat="i in [] | range:numberOfQuestions"
-					class="form-control"
+				class="form-control input-sm"
+				id="{{$index+1}}"
+				placeholder="Kross númer: {{$index+1}}"
+				requied
+				ng-maxlength=""/>
 
-					id="{{$index+1}}"
-					placeholder="Kross númer: {{$index+1}}"
-
-					requied
-					ng-maxlength=""/>
-
-				<button class="btn btn-embossed btn-primary"  type="button" ng-click="saveMult()"> Vista spuringu </button>
+				<section class="saveExQuest">
+					<button class="btn btn-primary"  type="button" ng-click="saveMult()"> Vista spuringu </button>
+				</section>
 			</section>
-			<button class="btn btn-embossed btn-primary"  type="button" ng-click="saveTemplate()"> save template </button>
+			
+			<section class="saveTemp">
+				<button class="btn btn-primary"  type="button" ng-click="saveTemplate()"> save template </button>
+			</section>	
 		</section>
 
 	</section>
 
-	<section class="right">
 
+
+
+	<section class="right">
 		<section class="courseList">
 			<section ng-repeat="question in evaluationTemplate.CourseQuestions">
 				{{question.TextIS}}
@@ -88,6 +111,6 @@
 				{{question.TextIS}}
 			</section>
 		</section>
-
 	</section>
-</div>
+
+</section>

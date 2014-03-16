@@ -7,42 +7,237 @@
 	align-item:center;
 	height:100%;
 	width:100%;
-	border-style:solid;
-	border-color:black;
+	border: solid black;
 }
 
-.left
+.createTemplateContainer
+ section.left
 {
 	display:flex;
-	flex-flow:column;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:initial;
+	align-self: stretch;
+	border: solid red;
+}
+
+.createTemplateContainer
+ section.right
+{
+	display:flex;
+	flex-flow:row nowrap;
+	order:2;
+	flex:1 1 auto;
+	align-self: stretch;
+	border: solid green;
+}
+
+.createTemplateContainer
+ section.left section.top
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:0 1 auto;
+	align-self: stretch;
+	border: solid blue;
+}
+
+.createTemplateContainer
+ section.left section.middle
+{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	order:2;
+	flex:initial;
+	align-self: stretch;
+	border: solid yellow;
+}
+
+.createTemplateContainer
+ section.left section.top section.tempName
+{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:1 1 0px;
+	border: solid red;
+	height:90px;
+}
+
+.createTemplateContainer
+ section.left section.top section.tempInfo
+{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:1 1 40px;
+	border: solid blue;
+	height:90px;
+}
+
+.createTemplateContainer
+ section.left section.middle section.catagory
+{
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:inital;
+	align-self: center;
+	border: solid green;
+	width: 300px;
+}
+
+.createTemplateContainer
+ section.left section.middle section.tQuest
+{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:0 1 auto;
+	border: solid pink;
+	width: 60%;
+}
+
+.createTemplateContainer
+ section.left section.middle section.xQuest
+{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:0 1 auto;
+	border: solid pink;
+	width: 60%;
+}
+
+.createTemplateContainer
+ section.left section.middle section.saveTemp
+{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:4;
+	flex:0 1 50px;
+	align-self: stretch;
+	border: solid pink;
+	height:60px;
+}
+
+.createTemplateContainer
+ section.left section.middle section.catagory section.courseRadio
+{
+	display: flex;
+	flex-flow: row nowrap;
 	justify-content:center;
 	align-content:center;
 	align-item:center;
 	order:1;
 	flex:1 1 auto;
 	align-self: stretch;
-	border-style: solid;
-	border-color:red;
+	border: solid green;
 }
 
-.right
+.createTemplateContainer
+ section.left section.middle section.catagory section.teacherRadio
 {
-	display:flex;
-	flex-flow:row nowrap;
-	order:1;
-	flex:2 1 70px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:1 1 auto;
 	align-self: stretch;
-	border-style: solid;
-	border-color:green;
+	border: solid green;
 }
+
+
+.createTemplateContainer
+ section.left section.middle section.tQuest section.textQuest
+{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:5 1 initial;
+	align-self: left;
+	border: solid orange;
+}
+
+.createTemplateContainer
+ section.left section.middle section.tQuest section.saveTextQuest
+{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content:flex-start;
+	align-content:center;
+	align-item:center;
+	order:3;
+	flex:0 1 auto;
+	border: solid green;
+}
+
+.createTemplateContainer
+ section.left section.middle section.textQuestion1
+{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:1 1 auto;
+	align-self: stretch;
+	border: solid red;
+}
+
+.createTemplateContainer
+ section.left section.middle section.saveExQuest
+{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content:flex-start;
+	align-content:center;
+	align-item:center;
+	order:3;
+	flex:0 1 auto;
+	border: solid green;
+}
+
 
 .courseList
 {
 	order:1;
 	flex:1 1 auto;
 	align-self: auto;
-	border-style: solid;
-	border-color:purple;
+	border: solid purple;
 	margin:20px;
 	height: 500px;
 	overflow:scroll;
@@ -53,82 +248,10 @@
 	order:2;
 	flex:1 1 auto;
 	align-self: auto;
-	border-style: solid;
-	border-color:purple;
+	border: solid purple;
 	margin:20px;
 	height: 500px;
 	overflow:scroll;
-}
-
-.top
-{
-	order:1;
-	flex:1 1 40px;
-	align-self: stretch;
-	border-style: solid;
-	border-color:blue;
-	height:50px;
-}
-
-.middle
-{
-	display: flex;
-	flex-flow: column nowrap  ;
-	justify-content: center ;
-	align-content: center;
-	align-items: center;
-	order:2;
-	flex:1 1 300px;
-	align-self: stretch;
-	border-style: solid;
-	border-color:yellow;
-}
-
-.class div.catagory
-{
-	order: 1;
-	flex: 0 1 auto;
-	flex-flow: row nowrap  ;
-
-	align-self: auto;
-	min-width: 0;
-	min-height: auto;
-
-}
-
-.class div.textQuestion
-{
-	order: 1;
-	flex: 0 1 auto;
-	align-self: auto;
-	min-width: 0;
-	min-height: auto;
-	
-}
-
-.class div.exQuestion
-{
-	order: 1;
-	flex: 0 1 auto;
-	align-self: auto;
-	min-width: 0;
-	min-height: auto;
-	
-}
-
-
-.templateForm
-{
-	width:50%;
-	border-style: solid;
-	border-color:orange;
-	margin:auto;
-	padding-top:5%;
-}
-
-#textInput
-{
-	margin-top:10px;
 }
 
 #button1
@@ -149,7 +272,6 @@
 	border-radius:20px;
 }
 
-
 #button3
 {
 	order:3;
@@ -159,14 +281,14 @@
 	border-radius:20px;
 }
 
-.textQuestion
+
+
+.templateForm
 {
-	z-index: 100;
-	border-style: solid;
-	border-color: red;
-	margin:auto;
-	display:none;
+	width: 500px;
 }
 
-
-
+.input-sm
+{
+	width: 90%;
+}
