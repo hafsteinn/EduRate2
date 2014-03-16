@@ -8,7 +8,7 @@ function($rootScope, $scope, adminFactory, $location, $routeParams){
 
 	adminFactory.getResults($rootScope.evalID).then(function(data){
 		$scope.results = data;
-		debugger
+
 	});
 
 	$scope.sendEvaluation = function(){

@@ -55,6 +55,18 @@ function ($rootScope,$http, $q,API_URL) {
 				});
 
 				return deferred.promise;
+			},
+			getEvaluations: function(){
+				var deferred = $q.defer();
+				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
+				$http.get(API_URL + 'evaluations')
+				.success(function(data, status, headers) {
+					deferred.resolve(data);
+				}).error(function() {
+					deferred.reject();
+				});
+
+				return deferred.promise;
 			}
 		};
 }]);

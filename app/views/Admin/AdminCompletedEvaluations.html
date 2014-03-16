@@ -1,0 +1,11 @@
+<div ng-controller="AdminGetEvaluationsController">
+	<section class="courseContainer">
+
+
+		<section class="alert alert-success" id="courseInstance" ng-repeat="eval in allEvaluations" ng-click="goToEvaluation(eval.ID)">
+			<h3>{{eval.TemplateTitleIS}}</h3>
+		</section>
+
+
+	</section>
+</div>
