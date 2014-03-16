@@ -8,17 +8,7 @@ function($rootScope, $scope, adminFactory, $location, $routeParams){
 
 	adminFactory.getResults($rootScope.evalID).then(function(data){
 		$scope.results = data;
-
+		debugger
 	});
-
-	$scope.sendEvaluation = function(){
-		var newEval = {
-			TemplateID: currentTemplate,
-			StartDate: StartDate,
-			EndDate: EndDate
-		};
-		adminFactory.newEvaluation(newEval);
-		$('dateInput').hide();
-	};
 
 }]);

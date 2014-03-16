@@ -21,6 +21,7 @@ function($rootScope, $scope, adminFactory, $location, $routeParams){
 	});
 
 	$scope.goToEvaluation = function(evalID){
+		$rootScope.evalID = evalID;
 		$location.path('/evaluations/evalID');
 	};
 

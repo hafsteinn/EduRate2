@@ -43,11 +43,4 @@ function($rootScope, $scope, adminFactory, $location){
 		}
 	});
 
-
-	$scope.goToStats = function(evalID){
-		$rootScope.evalID = evalID;
-		$location.path('/evaluations/evalID');
-	};
-
-
 }]);
