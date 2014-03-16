@@ -41,5 +41,17 @@ function ($rootScope,$http, $q,API_URL) {
 
 				return deferred.promise;
 			},
+			saveEvaluation: function (courseID, Semester, EvalID, Results) {
+				var deferred = $q.defer();
+				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
+				$http.post(API_URL + 'courses/' + courseID + '/' + Semester + '/evaluations/' + EvalID, Results)
+				.success(function(data, status, headers) {
+					deferred.resolve(data);
+				}).error(function() {
+					deferred.reject();
+				});
+
+				return deferred.promise;
+			}
 		};
 }]);

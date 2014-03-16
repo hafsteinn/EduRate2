@@ -7,20 +7,70 @@
 			<h4>{{currentEvalData.IntoTextIS}}</h4>
 		</section>
 
-		<section ng-repeat="question in currentEvalData.CourseQuestions">
-			<span ng-switch="currentEvalData.CourseQuestion.Type">
-				<section ng-switch-when="text">
-					<h5>{{question.TextIS}}</h5>
-					<input type="text"
-								class="form-control"
-								placeholder="Enter your username"
-								name="username"
-								ng-model="userData.user"
-								required
-								ng-maxlength="32"/>
-				</section>
-			</span>
+		<section class="courseEval">
+
+			<section class="textQuestions" ng-repeat="question in currentEvalData.CourseQuestions">
+				<span ng-switch="question.Type">
+					<section ng-switch-when="text">
+						<h5>{{question.TextIS}}</h5>
+						<input type="text"
+									class="form-control"
+									placeholder="svar"
+									id="{{question.ID}}"
+									name="svar"
+									required
+									ng-maxlength="32"/>
+					</section>
+				</span>
+			</section>
+
+			<section class="multQuestions" ng-repeat="question in currentEvalData.CourseQuestions">
+				<span ng-switch="question.Type">
+					<section ng-switch-when="multiple">
+						<h5>{{question.TextIS}}</h5>
+						<label class="checkbox" ng-repeat="answer in question.Answers">
+							<input type="checkbox" value="" id="{{answer.ID}}" data-toggle="checkbox">
+							{{answer.TextIS}}
+						</label>
+					</section>
+				</span>
+			</section>
 		</section>
 
+		<section class="teacherEval">
+
+			<section class="textQuestions" ng-repeat="question in currentEvalData.TeacherQuestions">
+				<span ng-switch="question.Type">
+					<section ng-switch-when="text">
+						<h5>{{question.TextIS}}</h5>
+						<input type="text"
+									class="form-control"
+									placeholder="svar"
+									id="{{question.ID}}"
+									name="svar"
+									required
+									ng-maxlength="32"/>
+					</section>
+				</span>
+			</section>
+
+			<section class="multQuestions" ng-repeat="question in currentEvalData.TeacherQuestions">
+				<span ng-switch="question.Type">
+					<section ng-switch-when="multiple">
+						<h5>{{question.TextIS}}</h5>
+						<label class="checkbox" ng-repeat="answer in question.Answers">
+							<input type="checkbox" value="" id="{{answer.ID}}" data-toggle="checkbox">
+							{{answer.TextIS}}
+						</label>
+					</section>
+				</span>
+			</section>
+		</section>
+
+		</section>
+	</Section>
+
+	<section class="saveEval">
+		<button class="btn btn-primary"  type="button" ng-click="saveEval()"> save evaluation </button>
 	</section>
 </div>
