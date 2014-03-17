@@ -13,9 +13,11 @@ function($rootScope, $scope, adminFactory){
 		$scope.allTemplates = data;
 	});
 
-	$scope.showDateInput = function(id){
+	$scope.showDateInput = function(id, name){
 		$('#dateInput').show();
 		currentTemplate = id;
+		$scope.currentTemplateName = name;
+		console.log("name " + currentTemplate);
 	};
 
 	$scope.sendEvaluation = function(){

@@ -1,19 +1,22 @@
-<div ng-controller="AdminGetTemplatesController">
-	<section class="courseContainer">
+<section ng-controller="AdminGetTemplatesController" class="evalTemp">
+	<section class ="headEval">
+		<h4>Mín sniðmát</h4>
+	</section>
 
-
-		<section class="alert alert-success" id="courseInstance" ng-repeat="template in allTemplates" ng-click="showDateInput(template.ID)">
-			<h3>{{template.TitleIS}}</h3>
+	<section class="tempBody">
+		<section class="courseContainer">
+			<section class="templates" ng-repeat="template in allTemplates" ng-click="showDateInput(template.ID, template.TitleIS)">
+				<h6 class="templateText">{{template.TitleIS}}</h6>
+			</section>
 		</section>
 
 		<section id="dateInput">
-			<h4>start date</h4>
-				<input id="startDateInput" type="text" >
-			<h4>end date</h4>
-				<input id="endDateInput" type="text" >
-			<button class="btn btn-embossed btn-primary"  type="button" ng-click="sendEvaluation()"> send </button>
+				<h5>{{currentTemplateName}}</h5>
+				<h5>start date</h5>
+					<input id="startDateInput" type="text" >
+				<h5>end date</h5>
+					<input id="endDateInput" type="text" >
+				<button class="btn btn-embossed btn-primary"  type="button" ng-click="sendEvaluation()"> send </button>
 		</section>
-
-
 	</section>
-</div>
+</section>

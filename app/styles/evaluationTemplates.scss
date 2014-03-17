@@ -1,4 +1,93 @@
+.evalTemp
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	width:100%;
+	border: solid black;
+}
+
+.evalTemp
+ section.headEval
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:1 1 0px;
+	align-self: stretch;
+	border: solid blue;
+}
+
+.evalTemp
+ section.tempBody
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:initial;
+	align-self: stretch;
+	border: solid red;
+}
+
+.evalTemp
+ section.tempBody section.courseContainer
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:0 1 auto;
+	align-self: flex-start;
+	border: solid red;
+	width:300px;
+}
+
+.evalTemp
+ section.tempBody section#dateInput
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:initial;
+	align-self: stretch;
+	border: solid red;
+	display:none;
+
+}
+
+
 #dateInput
 {
-	display:none;
+}
+
+
+.templates
+{
+	margin-bottom:20px;
+	height: 50px;
+	width: 100%;
+	border-radius: 20px;
+	background-color: #3498DB
+;
+	cursor:default;
+}
+
+.templateText
+{
+	text-align: center;
+	color: white;
+	cursor:default;
 }
