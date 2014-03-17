@@ -1,12 +1,54 @@
-#userInfo
+.courseContainer
 {
-	margin:20px;
-	border-radius: 10px;
 	display:flex;
-	flex-flow:row;
-	justify-content:flex-start;
+	flex-flow:column nowrap;
+	justify-content:center;
 	align-content:center;
-	align-items:center;
+	align-item:center;
+	width:100%;
+}
+
+.courseContainer section.userHead
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:0 1 0px;
+	align-self: flex-end;
+}
+
+.courseContainer section#userInfo
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:0 1 0px;
+	align-self: center;
+}
+
+.courseContainer section.courseInstance
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:0 1 0px;
+	align-self: center;
+	margin-top:10px;
+	margin-bottom:10px;
+	height: 50px;
+	border-radius: 20px;
+	background-color: #E74C3C
+;
+	width: 300px;
 }
 
 .userImage
@@ -50,18 +92,11 @@ h3
 	min-height: auto;
 }
 
-.courseInstance
-{
-	margin-bottom:20px;
-	height: 50px;
-	border-radius: 20px;
-	background-color: #E74C3C
-;
-	width: 300px;
-}
+
 
 .courses
 {
 	text-align: center;
 	color: white;
+	cursor:default;
 }

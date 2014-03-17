@@ -1,5 +1,15 @@
 <section ng-controller="AdminCreateTemplateController" class="createTemplateContainer">
 
+	<section class="createHead">
+		<a href="#/admin">
+			<button class="btn  btn-warning"  type="button" ng-click="sendEvaluation()"> Fara til baka </button>
+		</a>
+
+		<a href="#/">
+			<button class="btn  btn-danger"  type="button" ng-click="sendEvaluation()"> Útskráning </button>
+		</a>
+	</section>
+
 	<section class="left">
 	
 		<section class="top">
@@ -91,7 +101,11 @@
 			
 			<section class="saveTemp">
 				<h7 class= "newTempHedings">Ef þú hefur vistað allar spurningarnar sem eiga að vera í sniðmátinu vistaðu þá sniðmátið</h7>
-				<button class="btn btn-primary"  type="button" ng-click="saveTemplate()"> Vista sniðmát </button>
+				
+				<a href="#/admin">
+					<button class="btn btn-primary"  type="button" ng-click="saveTemplate()"> Vista sniðmát </button>
+				</a>
+
 			</section>	
 		</section>
 

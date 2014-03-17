@@ -9,7 +9,7 @@
 }
 
 .evalTemp
- section.headEval
+ section.evalHead
 {
 	display:flex;
 	flex-flow:row nowrap;
@@ -17,6 +17,19 @@
 	align-content:center;
 	align-item:center;
 	order:1;
+	flex:0 1 0px;
+	align-self: flex-end;
+}
+
+.evalTemp
+ section.headEval
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
 	flex:1 1 0px;
 	align-self: stretch;
 }
@@ -29,7 +42,7 @@
 	justify-content:center;
 	align-content:center;
 	align-item:center;
-	order:2;
+	order:3;
 	flex:initial;
 	align-self: stretch;
 }
@@ -137,7 +150,7 @@
 {
 	margin-bottom:20px;
 	height: 50px;
-	width: 80%;
+	width: 100%;
 	border-radius: 20px;
 	background-color: #3498DB
 ;

@@ -1,5 +1,10 @@
-<div ng-controller="myCoursesController">
+<section ng-controller="myCoursesController">
 	<section class="courseContainer">
+		<section class="userHead">
+			<a href="#/">
+				<button class="btn  btn-danger"  type="button" ng-click="sendEvaluation()"> Útskráning </button>
+			</a>
+		</section>
 
 		<section id="userInfo" class="alert alert-info">
 			<img class="userImage" src="{{userObject.ImageURL}}" alt="image" onerror="this.src='/images/avatar.png'"/>
@@ -14,6 +19,5 @@
 			<h6 class="courses">{{course.NameIS}}</h6>
 		</section>
 
-
 	</section>
-</div>
+</section>

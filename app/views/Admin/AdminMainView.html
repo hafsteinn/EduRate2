@@ -1,11 +1,17 @@
 <section ng-controller="AdminMainController">
 	<section class="courseContainer">
-
-		<section id="userInfo">
-			<img class="userImage" src="{{userObject.ImageURL}}" alt="image" onerror="this.src='/images/avatar.png'"/>
-			<section class="userInfoText">
-				<h5 class="userHeader">{{userObject.FullName}}</h5>
-				<h6 class="userHeader">{{userObject.SSN}}</h6>
+		<section class= "admHead">
+			<section class="logoutAdmin">
+				<a href="#/">
+					<button class="btn  btn-danger"  type="button" ng-click="sendEvaluation()"> Útskráning </button>
+				</a>
+			</section>
+			<section id="userInfo">
+				<img class="userImage" src="{{userObject.ImageURL}}" alt="image" onerror="this.src='/images/avatar.png'"/>
+				<section class="userInfoText">
+					<h5 class="userHeader">{{userObject.FullName}}</h5>
+					<h6 class="userHeader">{{userObject.SSN}}</h6>
+				</section>	
 			</section>
 		</section>
 

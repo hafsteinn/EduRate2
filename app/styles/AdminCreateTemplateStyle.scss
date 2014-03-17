@@ -10,6 +10,19 @@
 }
 
 .createTemplateContainer
+ section.createHead
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:0 1 auto;
+	align-self: flex-end;
+}
+
+.createTemplateContainer
  section.left
 {
 	display:flex;
@@ -17,7 +30,7 @@
 	justify-content:center;
 	align-content:center;
 	align-item:center;
-	order:1;
+	order:2;
 	flex:initial;
 	align-self: stretch;
 }
@@ -30,7 +43,7 @@
 	justify-content:center;
 	align-content:center;
 	align-item:center;
-	order:2;
+	order:3;
 	flex:1 1 auto;
 	align-self: stretch;
 }

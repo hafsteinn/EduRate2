@@ -1,10 +1,95 @@
+.courseContainer
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:1 1 auto;
+	align-self: stretch;
+}
+
+.courseContainer section.admHead
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:1 1 auto;
+	align-self: stretch;
+}
+
+.courseContainer section.admHead section.logoutAdmin
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:flex-end;
+	align-content:flex-end;
+	align-item:flex-end;
+	order:1;
+	flex:0 1 auto;
+	align-self: flex-end;
+}
+
+.courseContainer section.admHead section#userInfo
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:1 1 auto;
+	align-self: stretch;
+}
+
+.courseContainer section.getTemp
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:3;
+	flex:1 1 auto;
+	align-self: stretch;
+
+}
+
+.courseContainer section.createTemp
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:4;
+	flex:1 1 0px;
+	align-self: stretch;
+
+}
+
+.courseContainer section.stats
+{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:5;
+	flex:1 1 0px;
+	align-self: stretch;
+}
+
 .adminOption
 {
 	margin-bottom: 10px;	
 	height: 50px;
 	border-radius: 20px;
-	background-color: #F39C12
-;
+	background-color: #F39C12;
 	width: 300px;
 }
 
@@ -17,64 +102,10 @@
 
 #userInfo
 {
-	height: 110px;
 	border-radius: 20px;
 }
 
 .userHeader
 {
 	color: black;
-}
-
-.courseContainer
-{
-	display: flex;
-	flex-flow: column nowrap  ;
-	justify-content: center ;
-	align-content: center;
-	align-items: center;
-}
-
-.courseContainer section.userInfo
-{
-	order: 1;
-	flex: 0 1 auto;
-	align-self: auto;
-	min-width: 0;
-	min-height: auto;
-	align-content: center;
-
-}
-
-.courseContainer section.getTemp
-{
-	order: 2;
-	flex: 0 1 auto;
-	align-self: auto;
-	min-width: 0;
-	min-height: auto;
-	align-content: center;
-
-}
-
-.courseContainer section.createTemp
-{
-	order: 3;
-	flex: 0 1 auto;
-	align-self: auto;
-	min-width: 0;
-	min-height: auto;
-	align-content: center;
-
-}
-
-.courseContainer section.stats
-{
-	order: 4;
-	flex: 0 1 auto;
-	align-self: auto;
-	min-width: 0;
-	min-height: auto;
-	align-content: center;
-
 }
