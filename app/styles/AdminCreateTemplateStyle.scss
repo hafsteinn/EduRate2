@@ -7,7 +7,6 @@
 	align-item:center;
 	height:100%;
 	width:100%;
-	border: solid black;
 }
 
 .createTemplateContainer
@@ -21,7 +20,6 @@
 	order:1;
 	flex:initial;
 	align-self: stretch;
-	border: solid red;
 }
 
 .createTemplateContainer
@@ -29,10 +27,12 @@
 {
 	display:flex;
 	flex-flow:row nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
 	order:2;
 	flex:1 1 auto;
 	align-self: stretch;
-	border: solid green;
 }
 
 .createTemplateContainer
@@ -46,7 +46,6 @@
 	order:1;
 	flex:0 1 auto;
 	align-self: stretch;
-	border: solid blue;
 }
 
 .createTemplateContainer
@@ -60,7 +59,6 @@
 	order:2;
 	flex:initial;
 	align-self: stretch;
-	border: solid yellow;
 }
 
 .createTemplateContainer
@@ -73,7 +71,6 @@
 	align-item:center;
 	order:1;
 	flex:1 1 0px;
-	border: solid red;
 	height:90px;
 }
 
@@ -87,7 +84,6 @@
 	align-item:center;
 	order:2;
 	flex:1 1 40px;
-	border: solid blue;
 	height:90px;
 }
 
@@ -101,7 +97,6 @@
 	order:1;
 	flex:inital;
 	align-self: center;
-	border: solid green;
 	width: 300px;
 }
 
@@ -115,7 +110,6 @@
 	align-item:center;
 	order:2;
 	flex:0 1 auto;
-	border: solid pink;
 	width: 60%;
 }
 
@@ -129,7 +123,6 @@
 	align-item:center;
 	order:2;
 	flex:0 1 auto;
-	border: solid pink;
 	width: 60%;
 }
 
@@ -142,9 +135,8 @@
 	align-content:center;
 	align-item:center;
 	order:4;
-	flex:0 1 50px;
-	align-self: stretch;
-	border: solid pink;
+	flex:0 1 100px;
+	align-self: initial;
 	height:60px;
 }
 
@@ -159,7 +151,6 @@
 	order:1;
 	flex:1 1 auto;
 	align-self: stretch;
-	border: solid green;
 }
 
 .createTemplateContainer
@@ -173,7 +164,6 @@
 	order:2;
 	flex:1 1 auto;
 	align-self: stretch;
-	border: solid green;
 }
 
 
@@ -188,7 +178,6 @@
 	order:2;
 	flex:5 1 initial;
 	align-self: left;
-	border: solid orange;
 }
 
 .createTemplateContainer
@@ -201,7 +190,6 @@
 	align-item:center;
 	order:3;
 	flex:0 1 auto;
-	border: solid green;
 }
 
 .createTemplateContainer
@@ -215,7 +203,6 @@
 	order:2;
 	flex:1 1 auto;
 	align-self: stretch;
-	border: solid red;
 }
 
 .createTemplateContainer
@@ -228,30 +215,33 @@
 	align-item:center;
 	order:3;
 	flex:0 1 auto;
-	border: solid green;
 }
 
-
-.courseList
+.createTemplateContainer
+ section.right section.courseList
 {
-	order:1;
-	flex:1 1 auto;
-	align-self: auto;
-	border: solid purple;
-	margin:20px;
-	height: 500px;
-	overflow:scroll;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content:flex-start;
+	align-content:center;
+	align-item:center;
+	order:3;
+	flex:0 1 auto;
+	margin:10px;
 }
 
-.teacherList
+.createTemplateContainer
+ section.right section.teacherList
 {
-	order:2;
-	flex:1 1 auto;
-	align-self: auto;
-	border: solid purple;
-	margin:20px;
-	height: 500px;
-	overflow:scroll;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content:flex-start;
+	align-content:center;
+	align-item:center;
+	order:3;
+	flex:0 1 auto;
+	margin:10px;
+
 }
 
 #button1
@@ -289,4 +279,15 @@
 .input-sm
 {
 	width: 90%;
+}
+
+.newTempHedings
+{
+	text-align: center;
+	font-weight: bold;
+}
+
+.newTempHedings2
+{
+	
 }

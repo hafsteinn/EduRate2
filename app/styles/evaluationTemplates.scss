@@ -6,7 +6,6 @@
 	align-content:center;
 	align-item:center;
 	width:100%;
-	border: solid black;
 }
 
 .evalTemp
@@ -20,7 +19,6 @@
 	order:1;
 	flex:1 1 0px;
 	align-self: stretch;
-	border: solid blue;
 }
 
 .evalTemp
@@ -34,7 +32,6 @@
 	order:2;
 	flex:initial;
 	align-self: stretch;
-	border: solid red;
 }
 
 .evalTemp
@@ -48,8 +45,7 @@
 	order:1;
 	flex:0 1 auto;
 	align-self: flex-start;
-	border: solid red;
-	width:300px;
+	width:50%;
 }
 
 .evalTemp
@@ -63,26 +59,90 @@
 	order:2;
 	flex:initial;
 	align-self: stretch;
-	border: solid red;
 	display:none;
-
+	width: 50%;
 }
 
-
-#dateInput
+.evalTemp
+ section.tempBody section#dateInput section.makeEv
 {
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:initial;
+	align-self: center;
+	width: 90%;
 }
 
+
+.evalTemp
+ section.tempBody section#dateInput section.makeEv section.startDate
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:2;
+	flex:initial;
+	align-self: center;
+	width: 90%;
+}
+
+.evalTemp
+ section.tempBody section#dateInput section.makeEv section.endDate
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:3;
+	flex:initial;
+	align-self: center;
+	width: 90%;
+}
+
+.evalTemp
+ section.tempBody section#dateInput section.makeEv section.makeEvHeading
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:1;
+	flex:initial;
+	align-self: center;
+	width: 90%;
+}
+
+.evalTemp
+ section.tempBody section#dateInput section.dateButton
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	order:3;
+	flex:initial;
+	align-self: center;
+}
 
 .templates
 {
 	margin-bottom:20px;
 	height: 50px;
-	width: 100%;
+	width: 80%;
 	border-radius: 20px;
 	background-color: #3498DB
 ;
 	cursor:default;
+
 }
 
 .templateText
@@ -90,4 +150,9 @@
 	text-align: center;
 	color: white;
 	cursor:default;
+}
+
+.myTempsHeading
+{
+	color: #3498DB;
 }

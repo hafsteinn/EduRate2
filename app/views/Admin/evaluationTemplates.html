@@ -1,6 +1,6 @@
 <section ng-controller="AdminGetTemplatesController" class="evalTemp">
 	<section class ="headEval">
-		<h4>Mín sniðmát</h4>
+		<h4 class="myTempsHeading">Mín sniðmát</h4>
 	</section>
 
 	<section class="tempBody">
@@ -11,12 +11,24 @@
 		</section>
 
 		<section id="dateInput">
-				<h5>{{currentTemplateName}}</h5>
-				<h5>start date</h5>
-					<input id="startDateInput" type="text" >
-				<h5>end date</h5>
-					<input id="endDateInput" type="text" >
-				<button class="btn btn-embossed btn-primary"  type="button" ng-click="sendEvaluation()"> send </button>
+			<section class = "makeEv">
+				<section class="makeEvHeading">
+					<h10 class="myTempsHeading">Setja fyrir kennslumatið:  <span style="font-weight: bold; color:black;">{{currentTemplateName}}</span> </h10>
+				</section>
+				<section class= "startDate">
+					<h10 class="myTempsHeading">Hvenær á það að hefjast? </h10>
+						<input id="startDateInput" type="text" >
+				</section>	
+				<section class="endDate">
+					<h10 class="
+					myTempsHeading">Hvenær á það að enda?</h10>
+						<input id="endDateInput" type="text" >
+				</section>	
+				<section class="dateButton">
+					<button class="btn  btn-info"  type="button" ng-click="sendEvaluation()"> send </button>
+				</section>
+			</section>	
 		</section>
+
 	</section>
 </section>
