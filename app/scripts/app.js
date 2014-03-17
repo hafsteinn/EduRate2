@@ -30,6 +30,14 @@ angular.module('EduRateApp', [
         templateUrl: 'views/student/myEvaluations/currentEvaluation.html',
         controller: 'myCoursesController'
       })
+      .when('/statistics', {
+        templateUrl: 'views/Admin/AdminCompletedEvaluations.html',
+        controller: 'AdminGetEvaluationsController'
+      })
+      .when('/evaluations/:evalID', {
+        templateUrl: 'views/Admin/AdminStatisticsView.html',
+        controller: 'AdminStatisticsController'
+      })
       .otherwise({
         redirectTo: '/'
       });
