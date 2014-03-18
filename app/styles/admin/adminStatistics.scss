@@ -1,0 +1,28 @@
+@import 'main';
+
+.courseContainer
+{
+	@include parent_flexbox($display, $flex-column, $align-center, 1, $flex-parent-standard);
+
+	.createHead
+	{
+		@include child_flexbox(1, $flex-parent-standard, $align-center);
+	}
+
+	.statHeading
+	{
+		@include child_flexbox(2, $flex-parent-standard, $align-center);
+	}
+
+	#courseInstance 
+	{
+		@include child_flexbox(3, $flex-parent-standard, $align-center);
+		@include colordiv($admin-color, 300px);
+	}
+
+	.evalh7
+	{
+		@include colorfont(0px);
+		width: 100%;
+	}
+}	
