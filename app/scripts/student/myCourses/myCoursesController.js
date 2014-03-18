@@ -20,7 +20,6 @@ function($routeParams, $rootScope, $scope, studentFactory, $location){
 		$rootScope.currentEvalData = 'ready';
 
 		studentFactory.myEvaluations().then(function(dataO){
-
 			dataO.forEach(function(entry){
 				if(entry.CourseID === courseID)
 				{

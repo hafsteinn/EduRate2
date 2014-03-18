@@ -18,6 +18,19 @@ function ($rootScope,$http, $q,API_URL) {
 
 				return deferred.promise;
 			},
+			//get a single template by ID
+			getevaluationTemplate: function (tempID) {
+				var deferred = $q.defer();
+				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
+				$http.get(API_URL + 'evaluationtemplates/' + tempID)
+				.success(function(data, status, headers) {
+					deferred.resolve(data);
+				}).error(function() {
+					deferred.reject();
+				});
+
+				return deferred.promise;
+			},
 			//create a new evaluation template
 			newEvaluationTemplate: function (evaluationTemplate) {
 				var deferred = $q.defer();
