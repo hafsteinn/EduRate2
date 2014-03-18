@@ -1,76 +1,67 @@
-Kristín Ásgeirsdóttir
 <section ng-controller="AdminCreateTemplateController" class="createTemplateContainer">
 
 	<section class="createHead">
 		<a href="#/admin">
-			<button class="btn  btn-warning"  type="button" ng-click="sendEvaluation()"> Fara til baka </button>
+		<button class="btn  btn-warning"  type="button" ng-click="sendEvaluation()"> Fara til baka </button>
 		</a>
 
 		<a href="#/">
-			<button class="btn  btn-danger"  type="button" ng-click="sendEvaluation()"> Útskráning </button>
+		<button class="btn  btn-danger"  type="button" ng-click="sendEvaluation()"> Útskráning </button>
 		</a>
 	</section>
 
 	<section class="left">
-	
 		<section class="top">
-
 			<form class="templateForm">
 				<h6 class= "newTempHedings">Nýtt sniðmát</h6>
 				<section class="tempName">
 					<h7>Nafn smiðmátsins: </h7>
 					<input type="text"
-						class="form-control input-sm"
-						placeholder="Titill "
-						ng-model="evaluationTemplate.TitleIS"
-						required
-						ng-maxlength="50"/>
-				</section>	
+					class="form-control input-sm"
+					placeholder="Titill "
+					ng-model="evaluationTemplate.TitleIS"
+					required
+					ng-maxlength="50"/>
+				</section>
 
 				<section class="tempInfo">
 					<h7>Lýsing á sniðmátinu: </h7>
 					<input type="text"
-						class="form-control input-sm" 
-						placeholder="Lýsing"
-						ng-model="evaluationTemplate.IntroTextIS"
-						required
-						ng-maxlength="50"/>
-				</section>		
+					class="form-control input-sm" 
+					placeholder="Lýsing"
+					ng-model="evaluationTemplate.IntroTextIS"
+					required
+					ng-maxlength="50"/>
+				</section>
 			</form>
 		</section>
 
 
 		<section class="middle">
-			<h7 class= "newTempHedings">Er spurningin tengd áfanganum eða kennslunni?</h7>		
+			<h7 class= "newTempHedings">Er spurningin tengd áfanganum eða kennslunni?</h7>
 			<section class="catagory">
 				<section class = "courseRadio">
 					<label class="radio">
-						<input type="radio" name="catagory" id="courseCheck">Áfangi<br>
+					<input type="radio" name="catagory" id="courseCheck">Áfangi<br>
 					</label>
-
 				</section>
 				<section class = "teacherRadio">
 					<label class="radio">
-						<input type="radio" name="catagory" id="teacherCheck">Kennsla<br>
+					<input type="radio" name="catagory" id="teacherCheck">Kennsla<br>
 					</label>
 				</section>
 			</section>
 
 			<section class="tQuest">
-				
-					<h7>Textaspurning:</h7>
-					<textarea class="form-control input-sm" rows="2" ng-model="CTextIS"></textarea>
+				<h7>Textaspurning:</h7>
+				<textarea class="form-control input-sm" rows="2" ng-model="CTextIS"></textarea>
 				<section class = "saveTextQuest">
 					<button class="btn btn-primary"  type="button" ng-click="saveText()"> Vista spurningu </button>
 				</section>
-				
-
 			</section>
 
 			<section class = "xQuest">
-				
 				<h7>Krossapurning:</h7>
-				
 				<section class="textExQuest">
 					<input type="text"
 					class="form-control input-sm"
@@ -89,6 +80,7 @@ Kristín Ásgeirsdóttir
 					ng-maxlength="2"
 					ng-model="numberOfQuestions"/>
 				</section>
+
 				<input type="text" ng-repeat="i in [] | range:numberOfQuestions"
 				class="form-control input-sm"
 				id="{{$index+1}}"
@@ -100,22 +92,15 @@ Kristín Ásgeirsdóttir
 					<button class="btn btn-primary"  type="button" ng-click="saveMult()"> Vista spurningu </button>
 				</section>
 			</section>
-			
-			
+
 			<section class="saveTemp">
 				<h7 class= "newTempHedings">Ef þú hefur vistað allar spurningarnar sem eiga að vera í sniðmátinu vistaðu þá sniðmátið</h7>
-				
-				<a href="#/admin">
-					<button class="btn btn-primary"  type="button" ng-click="saveTemplate()"> Vista sniðmát </button>
-				</a>
-
-			</section>	
+					<a href="#/admin">
+						<button class="btn btn-primary"  type="button" ng-click="saveTemplate()"> Vista sniðmát </button>
+					</a>
+			</section>
 		</section>
-
 	</section>
-
-
-
 
 	<section class="right">
 

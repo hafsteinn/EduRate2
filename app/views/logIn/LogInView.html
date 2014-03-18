@@ -1,8 +1,9 @@
 <section ng-controller="LogInController" class="loginInput">
+	
 	<section class="loginHeader">
 		<h3 class = "welcome">Námsmat<h3>
 	</section>
-
+	
 	<section class="loginForm">
 		<form name="loginForm" ng-mousedown="loginfailed = true" novalidate>
 			<section class="loginUsername">
@@ -24,7 +25,6 @@
 					required
 					ng-maxlength="6"/>
 			</section>
-
 	</section>
 
 	<section class="submitLogin">
@@ -34,5 +34,5 @@
 	<selection class="loginError">
 		<h5 ng-hide = 'loginfailed'> Rangt notandanafn eða lykilorð! Prufaðu aftur</h5>
 	</selection>
-	
+
 </section>

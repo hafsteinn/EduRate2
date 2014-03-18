@@ -17,12 +17,13 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/admin.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="styles/myCourses.css">
-    <link rel="stylesheet" href="styles/AdminCreateTemplateStyle.css">
-    <link rel="stylesheet" href="styles/evaluationTemplates.css">
+    <link rel="stylesheet" href="styles/admin/adminMain.css">
+    <link rel="stylesheet" href="styles/admin/adminCreateTemplate.css"> 
+    <link rel="stylesheet" href="styles/admin/adminTemplates.css">   
+    <link rel="stylesheet" href="styles/login/login.css">
+    <link rel="stylesheet" href="styles/student/studentCourses.css">
+    <link rel="stylesheet" href="styles/student/studentEvaluation.css">
     <link rel="stylesheet" href="css/jquery.datetimepicker.css">
     <!-- endbuild -->
   </head>
@@ -54,7 +55,7 @@
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
     <script src="js/flatui-radio.js"></script>
     <script src="js/jquery.datetimepicker.js"></script>
     <!-- endbower -->
@@ -68,7 +69,6 @@
         <script src="scripts/Admin/adminFactory.js"></script>
         <script src="scripts/Admin/AdminGetEvaluations/AdminGetEvaluationsController.js"></script>
         <script src="scripts/Admin/AdminStatistics/AdminStatisticsController.js"></script>
-        <script src="scripts/Admin/AdminDirectives.js"></script>
         <script src="scripts/Admin/AdminMainPage/AdminMainController.js"></script>
         <script src="scripts/Admin/AdminGetTemplates/adminGetTemplatesController.js"></script>
         <script src="scripts/Admin/AdminCreateTemplate/AdminCreateTemplateFilters.js"></script>
