@@ -1,0 +1,127 @@
+@import 'main';
+
+.courseContainer
+{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-content:center;
+	align-item:center;
+	height:100%;
+	width:100%;
+
+	.createHead
+	{
+		display:flex;
+		flex-flow:row nowrap;
+		justify-content:center;
+		align-content:center;
+		align-item:center;
+		order:1;
+		flex:0 1 0px;
+		align-self: flex-end;
+	}
+
+	.header
+	{
+		display:flex;
+		flex-flow:column nowrap;
+		justify-content:center;
+		align-content:center;
+		align-item:center;
+		order:2;
+		flex:initial;
+		align-self: center;
+
+	}
+
+	.courseEval
+	{
+		display:flex;
+		flex-flow:column nowrap;
+		justify-content:center;
+		align-content:center;
+		align-item:center;
+		order:3;
+		flex:1 1 auto;
+		align-self: center;
+	
+		.textQuestions
+		{
+			display:flex;
+			flex-flow:column nowrap;
+			justify-content:center;
+			align-content:center;
+			align-item:center;
+			order:1;
+			flex:1 1 auto;
+			align-self: center;
+		}
+
+		.multQuestions
+		{
+			display:flex;
+			flex-flow:column nowrap;
+			justify-content:center;
+			align-content:center;
+			align-item:center;
+			order:2;
+			flex:1 1 auto;
+			align-self: center;
+		}
+	}
+
+	.teacherEval 
+	{
+		display:flex;
+		flex-flow:column nowrap;
+		justify-content:center;
+		align-content:center;
+		align-item:center;
+		order:4;
+		flex:0 1 auto;
+		align-self: center;
+
+		.textQuestions
+		{
+			display:flex;
+			flex-flow:column nowrap;
+			justify-content:center;
+			align-content:center;
+			align-item:center;
+			order:1;
+			flex:1 1 auto;
+			align-self: center;
+		}
+
+		.multQuestions
+		{
+			display:flex;
+			flex-flow:column nowrap;
+			justify-content:center;
+			align-content:center;
+			align-item:center;
+			order:2;
+			flex:1 1 auto;
+			align-self: center;
+		}
+	}
+
+	.saveEval 
+	{
+		display:flex;
+		flex-flow:column nowrap;
+		justify-content:center;
+		align-content:center;
+		align-item:center;
+		order:5;
+		flex:0 1 auto;
+		align-self: center;
+	}
+}
+
+.currEvalHedings
+{
+	text-align: center;
+	font-weight: bold;
+}

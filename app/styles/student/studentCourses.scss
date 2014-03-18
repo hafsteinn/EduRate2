@@ -1,0 +1,60 @@
+@import 'main';
+
+.courseContainer
+{
+	@include parent_flexbox($display, $flex-column, $align-center, 1, $flex-parent-standard);
+
+	.userHead
+	{
+		@include parent_flexbox($display, $flex-column, $align-flex-end, 1, $flex-child-standard);
+	}
+
+	#userInfo
+	{
+		@include parent_flexbox($display, $flex-row, $align-center, 1, $flex-child-standard);
+	}
+
+	.courseInstance
+	{
+		@include parent_flexbox($display, $flex-row, $align-center, 1, $flex-child-standard);
+
+		@include colordiv($student-color, 300px);
+
+		margin-top:10px;
+		margin-bottom:10px;
+		width: 300px;
+	}
+}
+
+.userImage
+{
+	border-radius: 50%;
+	height:100px;
+	width:100px;
+	
+	@include child_flexbox(1, $flex-child-standard, $align-center);
+
+   	background-image: url('/images/avatar.png');
+   	background-size: contain;
+}
+
+.userInfoText
+{
+	padding-left:20px;
+	@include child_flexbox(2, $flex-child-standard, $align-center);
+}
+
+h2
+{
+	@include child_flexbox(1, $flex-child-standard, $align-center);
+}
+
+h3
+{
+	@include child_flexbox(2, $flex-child-standard, $align-center);
+}
+
+.courses
+{
+	@include colorfont(10px);
+}

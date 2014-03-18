@@ -5,8 +5,8 @@ angular.module('EduRateApp').controller('LogInController',
 function($rootScope, $scope, loginFactory, $location){
 
 	$scope.userData = {
-		user: 'admin',
-		pass: '1234567'
+		user: 'kristina11',
+		pass: '2210912809'
 	};
 
 	$scope.loginfailed = true;

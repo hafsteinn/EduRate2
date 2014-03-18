@@ -1,0 +1,45 @@
+@import 'main';
+
+.loginInput
+{
+	@include parent_flexbox($display, $flex-column, $align-center, 1, $flex-parent-standard);
+
+	.loginHeader
+	{
+		@include child_flexbox(1, $flex-parent-standard, $align-center);
+		color: $main-color;
+	}
+
+	.loginForm 
+	{
+		@include child_flexbox(2, $flex-parent-standard, $align-center);
+
+		.loginUsername
+		{
+			@include child_flexbox(1, $flex-child-standard, $align-center);
+
+			padding-bottom: 10px;
+
+		}	
+		.loginPassword
+		{
+			@include child_flexbox(2, $flex-child-standard, $align-center);
+
+			padding-bottom: 10px;
+		}
+	}	
+	.submitLogin
+	{
+		@include parent_flexbox($display, $flex-column, $align-center, 3, $flex-parent-standard);
+
+		.btn btn-primary
+		{
+			@include child_flexbox(1, $flex-child-standard, $align-center);
+		}
+	}
+	.loginError
+	{
+		@include child_flexbox(5, $flex-child-standard, $align-center);
+		color: $error-color;
+	}
+}

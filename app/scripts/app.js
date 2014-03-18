@@ -19,7 +19,7 @@ angular.module('EduRateApp', [
         controller: 'AdminMainController'
       })
       .when('/evaluationtemplates', {
-        templateUrl: 'views/Admin/evaluationTemplates.html',
+        templateUrl: 'views/Admin/AdminTemplatesView.html',
         controller: 'AdminGetTemplatesController'
       })
       .when('/createtemplate', {

@@ -1,0 +1,55 @@
+/*Color*/
+$main-color: #1ABC9C;
+$error-color: red;
+$student-color: #E74C3C;
+$admin-color: #3498DB;
+
+/*Color div with radius*/
+@mixin colordiv($color, $width)
+{
+	height: 50px;
+	width: $width;
+	margin-bottom: 10px;	
+	border-radius: 20px;
+	background-color: $color;
+	cursor:default;
+}
+/*Color font for div*/
+@mixin colorfont($padding)
+{
+	text-align: center;
+	color: white;
+	padding-top: $padding;	
+	cursor:default;
+}
+
+/*Flexbox*/
+$display: flex;
+$display-none: none;
+$flex-row: row;
+$flex-column: column;
+$flex-parent-standard: 1 1 auto;
+$flex-child-standard: 0 1 auto;
+$align-center: center;
+$align-flex-end: flex-end;
+$align-flex-start: flex-start;
+
+
+@mixin parent_flexbox($display, $roworcolumn, $align, $order, $flex) {
+
+	display: $display;
+	flex-flow: $roworcolumn;
+	justify-content: $align;
+	align-content: $align;
+	align-items: $align;
+	order: $order;
+	align-self: $align;
+	flex: $flex;
+}
+
+@mixin child_flexbox($order, $flex, $align) {
+	order: $order;
+	flex: $flex;
+	align-self: $align;
+}
+
