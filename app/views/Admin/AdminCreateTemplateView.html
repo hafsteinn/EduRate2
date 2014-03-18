@@ -10,7 +10,9 @@
 		</a>
 	</section>
 
+
 	<section class="left">
+		
 		<section class="top">
 			<form class="templateForm">
 				<h6 class= "newTempHedings">Nýtt sniðmát</h6>
@@ -42,12 +44,12 @@
 			<section class="catagory">
 				<section class = "courseRadio">
 					<label class="radio">
-					<input type="radio" name="catagory" id="courseCheck">Áfangi<br>
+						<input type="radio" name="catagory" id="courseCheck">Áfangi<br>
 					</label>
 				</section>
 				<section class = "teacherRadio">
 					<label class="radio">
-					<input type="radio" name="catagory" id="teacherCheck">Kennsla<br>
+						<input type="radio" name="catagory" id="teacherCheck">Kennsla<br>
 					</label>
 				</section>
 			</section>
@@ -80,7 +82,6 @@
 					ng-maxlength="2"
 					ng-model="numberOfQuestions"/>
 				</section>
-
 				<input type="text" ng-repeat="i in [] | range:numberOfQuestions"
 				class="form-control input-sm"
 				id="{{$index+1}}"
@@ -95,26 +96,27 @@
 
 			<section class="saveTemp">
 				<h7 class= "newTempHedings">Ef þú hefur vistað allar spurningarnar sem eiga að vera í sniðmátinu vistaðu þá sniðmátið</h7>
-					<a href="#/admin">
-						<button class="btn btn-primary"  type="button" ng-click="saveTemplate()"> Vista sniðmát </button>
-					</a>
+				<a href="#/admin">
+					<button class="btn btn-primary"  type="button" ng-click="saveTemplate()"> Vista sniðmát </button>
+				</a>
 			</section>
 		</section>
 	</section>
+
 
 	<section class="right">
 
 		<section class="courseList">
 			<h8 class= "newTempHedings">Áfangaspurningar</h8>
 			<section ng-repeat="question in evaluationTemplate.CourseQuestions">
-				{{question.TextIS}}
+			{{question.TextIS}}
 			</section>
 		</section>
 
 		<section class="teacherList">
 			<h8 class= "newTempHedings">Kennsluspurningar</h8>
 			<section ng-repeat="question in evaluationTemplate.TeacherQuestions">
-				{{question.TextIS}}
+			{{question.TextIS}}
 			</section>
 		</section>
 	</section>

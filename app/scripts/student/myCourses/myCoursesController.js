@@ -10,17 +10,21 @@ function($routeParams, $rootScope, $scope, studentFactory, $location){
 		$scope.myCourses = data;
 	});
 	
-
 	$scope.goToEval = function(courseID){
 
 		$routeParams.CourseID = courseID;
 
-		console.log('setting');
+		console.log(courseID);
 		$rootScope.currentEvalData = 'ready';
 
 		studentFactory.myEvaluations().then(function(dataO){
 							//debugger
+			console.log('setting1');
+			console.log('dataO ' +  dataO);
+	
 			dataO.forEach(function(entry){
+				console.log('setting2');
+
 				if(entry.CourseID === courseID)
 				{
 					$routeParams.Semester = entry.Semester;
