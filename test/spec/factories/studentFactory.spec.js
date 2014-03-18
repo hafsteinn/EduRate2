@@ -96,7 +96,7 @@ describe('StudentFactory tests', function() {
         $httpBackend.flush();
     });
 
-    it('is possible to get my evaluations', function() {
+    it('is possible to get my currentEvaluation', function() {
         studentFactory.currentEvaluation(courseID, semester, evalID).then(function(data) {
             expect(data.ID).toBe(1);
             expect(studentFactory.getID()).toBe(data.ID);
@@ -129,7 +129,7 @@ describe('StudentFactory tests', function() {
 
 
 
-    it('is possible to get my evaluations', function() {
+    it('is possible to get my saveEvaluation', function() {
         studentFactory.saveEvaluation(courseID, semester, evalID, results).then(function(data) {
 
             expect(studentFactory.getCourseID()).toBe(courseID);

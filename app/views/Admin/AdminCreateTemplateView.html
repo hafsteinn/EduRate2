@@ -1,3 +1,4 @@
+Kristín Ásgeirsdóttir
 <section ng-controller="AdminCreateTemplateController" class="createTemplateContainer">
 
 	<section class="createHead">
@@ -46,6 +47,7 @@
 					<label class="radio">
 						<input type="radio" name="catagory" id="courseCheck">Áfangi<br>
 					</label>
+
 				</section>
 				<section class = "teacherRadio">
 					<label class="radio">
@@ -61,6 +63,7 @@
 				<section class = "saveTextQuest">
 					<button class="btn btn-primary"  type="button" ng-click="saveText()"> Vista spurningu </button>
 				</section>
+				
 
 			</section>
 
@@ -95,40 +98,6 @@
 
 				<section class="saveExQuest">
 					<button class="btn btn-primary"  type="button" ng-click="saveMult()"> Vista spurningu </button>
-				</section>
-			</section>
-			
-			<section class = "rQuest">
-				
-				<h7>Radiospurning:</h7>
-				
-				<section class="textRQuest">
-					<input type="text"
-					class="form-control input-sm"
-					id=""
-					placeholder="Spurning"
-					ng-model="CMTRextIS"
-					requied
-					ng-maxlength=""/>
-				</section>
-
-				<section class="numR">
-					<input type="text"
-					class="form-control input-sm"
-					placeholder="Fjöldi krossaspurninga"
-					requied
-					ng-maxlength="2"
-					ng-model="numberOfRQuestions"/>
-				</section>
-				<input type="text" ng-repeat="i in [] | range:numberOfRQuestions"
-				class="form-control input-sm"
-				id="{{$index+1}}"
-				placeholder="Kross númer: {{$index+1}}"
-				requied
-				ng-maxlength=""/>
-
-				<section class="saveRQuest">
-					<button class="btn btn-primary"  type="button" ng-click="saveSingle()"> Vista spurningu </button>
 				</section>
 			</section>
 			
