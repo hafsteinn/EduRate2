@@ -31,7 +31,7 @@ angular.module('EduRateApp', [
         controller: 'myCoursesController'
       })
       .when('/statistics', {
-        templateUrl: 'views/Admin/AdminCompletedEvaluations.html',
+        templateUrl: 'views/Admin/AdminCompletedEvaluationsView.html',
         controller: 'AdminGetEvaluationsController'
       })
       .when('/evaluations/:evalID', {
