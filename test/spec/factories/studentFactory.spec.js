@@ -127,8 +127,6 @@ describe('StudentFactory tests', function() {
         $httpBackend.flush();
     });
 
-
-
     it('is possible to get my saveEvaluation', function() {
         studentFactory.saveEvaluation(courseID, semester, evalID, results).then(function(data) {
 
