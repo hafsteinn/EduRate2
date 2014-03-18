@@ -41,5 +41,5 @@ angular.module('EduRateApp', [
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .constant('API_URL', 'http://dispatch.ru.is/h18/api/v1/');
+  }).constant('API_URL', 'http://dispatch.ru.is/h18/api/v1/');
+
