@@ -5,7 +5,7 @@ angular.module('EduRateApp').factory('adminFactory',
 function ($rootScope,$http, $q,API_URL) {
 
 	var ID, TemplateTitleIS, TemplateTitleEN, StartDate, EndDate, Status, TitleIS, TitleEN, IntroTextIS, IntroTextEN, TempID, EvaluationTemplate,
-		TemplateID, NewEval;
+		TemplateID, NewEval, EvalID;
 
 	return {
 
@@ -51,8 +51,9 @@ function ($rootScope,$http, $q,API_URL) {
 			getNewEval: function() {
 				return NewEval;
 			},
-
-
+			getEvalID: function() {
+				return EvalID;
+			},
 
 			//get all evaluation templates
 			evaluationTemplates: function () {
@@ -136,6 +137,11 @@ function ($rootScope,$http, $q,API_URL) {
 				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
 				$http.get(API_URL + 'evaluations/' + evalID + '/')
 				.success(function(data, status, headers) {
+					ID = data.ID;
+					TemplateID = data.TemplateID;
+					TemplateTitleIS = data.TemplateTitleIS;
+					TemplateTitleEN = data.TemplateTitleEN
+					EvalID = evalID;
 					deferred.resolve(data);
 				}).error(function() {
 					deferred.reject();
@@ -148,6 +154,13 @@ function ($rootScope,$http, $q,API_URL) {
 				$http.defaults.headers.common.Authorization = 'Basic ' + $rootScope.tokenValue;
 				$http.get(API_URL + 'evaluations')
 				.success(function(data, status, headers) {
+					ID = data.ID;
+					TemplateTitleIS = data.TemplateTitleIS;
+					TemplateTitleEN = data.TemplateTitleEN;
+					StartDate = data.StartDate;
+					EndDate = data.EndDate;
+					Status = data.Status;
+
 					deferred.resolve(data);
 				}).error(function() {
 					deferred.reject();
