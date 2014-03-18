@@ -31,7 +31,7 @@ angular.module('EduRateApp', [
         controller: 'myCoursesController'
       })
       .when('/statistics', {
-        templateUrl: 'views/Admin/AdminCompletedEvaluations.html',
+        templateUrl: 'views/Admin/AdminCompletedEvaluationsView.html',
         controller: 'AdminGetEvaluationsController'
       })
       .when('/evaluations/:evalID', {
@@ -41,5 +41,5 @@ angular.module('EduRateApp', [
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .constant('API_URL', 'http://dispatch.ru.is/h18/api/v1/');
+  }).constant('API_URL', 'http://dispatch.ru.is/h18/api/v1/');
+
