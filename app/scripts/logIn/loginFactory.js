@@ -4,7 +4,7 @@ angular.module('EduRateApp').factory('loginFactory',
 ['$rootScope','$http', '$q','API_URL',
 function ($rootScope, $http, $q,API_URL) {
 
-	var username, role, token,userObject;
+	var username, role, token,userObject, pass;
 
 	return {
 
@@ -19,6 +19,9 @@ function ($rootScope, $http, $q,API_URL) {
 			},
 			getUsername: function() {
 				return username;
+			},
+			getPass: function() {
+				return pass;
 			},
 			getRole: function() {
 				return role;

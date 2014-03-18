@@ -79,8 +79,9 @@ function($rootScope, $scope, adminFactory, $location){
 		}
 	}
 
-		//fall sem er keyrt þegar user gerir save
+	//fall sem er keyrt þegar user gerir save
 	$scope.saveMult = function(){
+		console.log("here!");
 		//athuga hvort sé hakað í course eða teacher
 		if($('#courseCheck').prop('checked'))
 		{
@@ -133,6 +134,62 @@ function($rootScope, $scope, adminFactory, $location){
 			alert('Þú verður að velja annaðhvort námskeið eða kennara');
 		}
 	}
+
+	//fall sem er keyrt þegar user gerir save
+	$scope.saveSingle = function(){
+		//athuga hvort sé hakað í course eða teacher
+		if($('#courseCheck').prop('checked'))
+		{
+			var newT = newTextCourseQuestion(
+							'single',
+							$scope.CMTextIS,
+							$scope.CMTextEN,
+							$scope.CMimageURL);
+
+			//populate answers array
+			for(var i = 1; i <= $scope.numberOfRQuestions;i++)
+			{
+					var single = {
+						TextIS: $('#' + i).val(),
+						TextEN: '',
+						ImageURL: '',
+						Weight: i,
+					};
+
+					newT.Answers.push(single);
+			}
+
+			$scope.evaluationTemplate.CourseQuestions.push(newT);
+		}
+		else if($('#teacherCheck').prop('checked'))
+		{
+			var newT = newTextTeacherQuestion(
+							'single',
+							$scope.CMTextIS,
+							$scope.CMTextEN,
+							$scope.CMimageURL);
+
+			//populate answers array
+			for(var i = 1; i <= $scope.numberOfRQuestions;i++)
+			{
+					var single = {
+						TextIS: $('#' + i).val(),
+						TextEN: '',
+						ImageURL: '',
+						Weight: i,
+					};
+
+					newT.Answers.push(single);
+			}
+
+			$scope.evaluationTemplate.TeacherQuestions.push(newT);
+		}
+		else
+		{
+			alert('Þú verður að velja annaðhvort námskeið eða kennara');
+		}
+	}
+
 
 	$scope.saveTemplate = function(){
 		adminFactory.newEvaluationTemplate($scope.evaluationTemplate);

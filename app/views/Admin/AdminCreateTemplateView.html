@@ -98,6 +98,40 @@
 				</section>
 			</section>
 			
+			<section class = "rQuest">
+				
+				<h7>Radiospurning:</h7>
+				
+				<section class="textRQuest">
+					<input type="text"
+					class="form-control input-sm"
+					id=""
+					placeholder="Spurning"
+					ng-model="CMTRextIS"
+					requied
+					ng-maxlength=""/>
+				</section>
+
+				<section class="numR">
+					<input type="text"
+					class="form-control input-sm"
+					placeholder="Fjöldi krossaspurninga"
+					requied
+					ng-maxlength="2"
+					ng-model="numberOfRQuestions"/>
+				</section>
+				<input type="text" ng-repeat="i in [] | range:numberOfRQuestions"
+				class="form-control input-sm"
+				id="{{$index+1}}"
+				placeholder="Kross númer: {{$index+1}}"
+				requied
+				ng-maxlength=""/>
+
+				<section class="saveRQuest">
+					<button class="btn btn-primary"  type="button" ng-click="saveSingle()"> Vista spurningu </button>
+				</section>
+			</section>
+			
 			
 			<section class="saveTemp">
 				<h7 class= "newTempHedings">Ef þú hefur vistað allar spurningarnar sem eiga að vera í sniðmátinu vistaðu þá sniðmátið</h7>
