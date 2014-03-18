@@ -137,7 +137,6 @@ function($rootScope, $scope, adminFactory, $location){
 
 	//fall sem er keyrt þegar user gerir save
 	$scope.saveSingle = function(){
-		console.log("sungle");
 		//athuga hvort sé hakað í course eða teacher
 		if($('#courseCheck').prop('checked'))
 		{

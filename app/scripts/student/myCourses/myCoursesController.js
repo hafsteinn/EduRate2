@@ -9,7 +9,6 @@ function($routeParams, $rootScope, $scope, studentFactory, $location){
 	studentFactory.myCourses().then(function(data){
 		$scope.myCourses = data;
 	});
-
 	
 
 	$scope.goToEval = function(courseID){

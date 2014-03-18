@@ -15,10 +15,21 @@ describe('LogInController tests', function() {
 			user: 'hafsteinn11',
 			pass: '123456'
 		};
+		$scope.adminData = {
+			user: 'admin',
+			pass: '123456'
+		};
 	}));
 
 
-	it('should have something with test', function() {
+	it('check if the data for user is right', function() {
 		expect($scope.userData.user).toBe('hafsteinn11');
+		expect($scope.userData.pass).toBe('123456');
 	});
+
+	it('check if the data for admin is right', function() {
+		expect($scope.adminData.user).toBe('admin');
+		expect($scope.adminData.pass).toBe('123456');
+	});
+
 });
